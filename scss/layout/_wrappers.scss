@@ -1,0 +1,50 @@
+@import "layout/var";
+
+body{
+    font-family: $font;
+    font-weight: $r;
+}
+p{
+    margin: 0;
+}
+.app{
+    position: relative;
+    min-height: 100vh;
+}
+.always-hidden{ 
+    border: 0; 
+    clip: rect(0 0 0 0); 
+    clip-path: incet(50%); 
+    height: 1px;
+    min-height: 0;
+    margin: -1px; 
+    overflow: hidden; 
+    padding: 0; 
+    position: absolute; 
+    width: 1px; 
+    white-space: nowrap;
+    &.visible{
+        overflow: auto;
+        height: auto;
+        min-height: 100vh;
+        margin: auto;
+        width: 100%;
+        white-space: normal;
+    } 
+}
+.main-container{
+    position: relative;
+    z-index: 5;
+    max-width: 1536px;
+    margin: 0 auto;
+    padding: 156px 64px 32px 64px;
+    display: flex;
+    flex-direction: column;
+    &--menu{
+        min-height: 100vh;
+        display: flex;
+        padding: 32px 64px;
+        
+    }
+}
+

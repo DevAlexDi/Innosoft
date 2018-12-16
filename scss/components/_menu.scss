@@ -1,0 +1,51 @@
+@import "layout/var";
+
+.menu{
+    background-color: #202020;
+    position: relative;
+    &__list{
+        margin: auto;
+        width: 100%;
+        ul{
+            list-style: none;
+            margin: 0;
+            padding: 167px 0;
+            li{
+                margin-bottom: 20px;
+                display: flex;
+                position: relative;
+                span{
+                    display: block;
+                    color: #fff;
+                    font-size: 52px;
+                    text-transform: uppercase;
+                    font-weight: $b;
+                    letter-spacing: 0.04em;
+                    cursor: pointer;
+                   
+                    display: block;
+                }
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
+        }
+        &__footer{
+            border-top: 1px solid  rgba(255, 255, 255, 0.15);;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 10px;
+            &__lng{
+                font-size: 16px;
+                color: #fff;
+
+            }
+            &__copy{
+                font-size: 13px;
+                color: rgba(255, 255, 255, 0.25);
+            }
+        }
+    }
+
+}
