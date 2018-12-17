@@ -1,0 +1,49 @@
+@import "layout/var";
+
+.projects{
+    background-color: #202020;
+    position: relative;
+    overflow: hidden!important;
+}
+.project__slide{
+    position: absolute;
+    top: 0;
+    transform: translateY(100%);
+    min-height: 100vh;
+    left: 0;
+    width: 100%;
+    padding-top: 230px;
+    &.visible-scroll-bott{
+        animation: show-slide-to-top 0.23s linear forwards;
+    }
+    &.hide-scroll-bott{
+        animation: hide-slide-to-top 0.23s linear forwards;
+    }
+    &.visible-scroll-top{
+        animation: show-slide-to-bott 0.23s linear forwards;
+    }
+    &.hide-scroll-top{
+        animation: hide-slide-to-bott 0.23s linear forwards;
+    }
+    &__closed-wrapp{
+        height: 330px;
+        position: relative;
+          
+    }
+    .gradient-bg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        &--1{
+            background: linear-gradient(338.92deg, #F1637C 0%, #F88849 100.41%);
+        }
+        &--2{
+            background: linear-gradient(333.86deg, rgba(82, 108, 244, 0.96) 0%, #FF7596 100.41%);
+        }
+        &--3{
+            background: linear-gradient(333.86deg, #6D0DE8 0%, #4FFFEA 100.41%);
+        }
+    }
+}

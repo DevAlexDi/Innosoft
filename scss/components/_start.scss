@@ -3,6 +3,14 @@
 .start{
     background-color: #202020;
     position: relative;
+    &.loaded{
+        .start__background{
+            opacity: 1;
+        }
+        .start__logo{
+            opacity: 1;
+        }
+    }
     &__background{
         background-image: url(../img/bg-start.jpg);
         background-size: cover;
@@ -12,12 +20,15 @@
         left: 0;
         width: 100%;
         height: 100%;
+        transition: 0.5s;
+        opacity: 0;
     }
     &__logo{
         margin-bottom: 60px;
+        transition: 0.5s;
+        opacity: 0;
         img{
             margin: 0 auto;
-
         }
     }
     &__scroller{
@@ -25,6 +36,10 @@
         width: 32px;
         overflow: hidden;
         margin: 0 auto;
+        display: none;
+        &.delay{
+            display: block;
+        }
         &__line{
             width: 1px;
             margin: 0 auto;

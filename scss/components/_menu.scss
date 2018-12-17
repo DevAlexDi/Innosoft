@@ -1,8 +1,28 @@
 @import "layout/var";
 
+
+
 .menu{
     background-color: #202020;
     position: relative;
+    z-index: 5;
+    opacity: 0;
+    transition: opacity 1s;
+    &.visible{
+        opacity: 1;
+        .menu__list{
+            ul{
+                li{
+                    span{
+                        transform: translateY(0);
+                    }
+                }
+            }
+            .menu__list__footer{
+                opacity: 1;
+            }
+        }
+    }
     &__list{
         margin: auto;
         width: 100%;
@@ -14,7 +34,30 @@
                 margin-bottom: 20px;
                 display: flex;
                 position: relative;
+                overflow: hidden;
+                &:nth-child(1){
+                    span{
+                        transition-delay: .25s;
+                    }
+                }
+                &:nth-child(2){
+                    span{
+                        transition-delay: .35s;
+                    }
+                }
+                &:nth-child(3){
+                    span{
+                        transition-delay: .45s;
+                    } 
+                }
+                &:nth-child(4){
+                    span{
+                        transition-delay: .55s;
+                    }
+                }
                 span{
+                    transform: translateY(100%);
+                    transition: 0.3s;
                     display: block;
                     color: #fff;
                     font-size: 52px;
@@ -22,7 +65,6 @@
                     font-weight: $b;
                     letter-spacing: 0.04em;
                     cursor: pointer;
-                   
                     display: block;
                 }
                 &:last-child{
@@ -36,10 +78,12 @@
             justify-content: space-between;
             align-items: center;
             padding-top: 10px;
+            opacity: 0;
+            transition: 0.3s;
+            transition-delay: .65s;
             &__lng{
                 font-size: 16px;
                 color: #fff;
-
             }
             &__copy{
                 font-size: 13px;

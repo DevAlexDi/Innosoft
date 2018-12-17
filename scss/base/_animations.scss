@@ -6,4 +6,43 @@
         transform: translateY(100%);
     }
   }
-  
+
+  @keyframes show-slide-to-top {
+    0%{
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+
+    }
+  }
+  @keyframes hide-slide-to-top {
+    0%{
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100%);
+
+    }
+  }
+
+
+  @keyframes show-slide-to-bott {
+    0%{
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+
+    }
+  }
+  @keyframes hide-slide-to-bott {
+    0%{
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100%);
+
+    }
+  }
+
