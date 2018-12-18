@@ -1,10 +1,139 @@
 @import "layout/var";
-
-.projects{
+.projects-wr{
     background-color: #202020;
     position: relative;
     overflow: hidden!important;
+    &__title{
+        position: fixed;
+        z-index: 50;
+        top: 265px;
+        left: 0;
+        width: 100%;
+        transition: top 0.3s;
+        &.hover-project{
+            .projects-wr__title__count-sildes{
+                opacity: 0;
+                transform: translateX(-50%);
+            }
+            .projects-wr__title__text{
+                left: 50%;
+                transform: translateX(-50%);
+                .name-project{
+                    color: #fff;
+                }
+            }
+            .view-project{
+                &__butt{
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        }
+        &.opened{
+            top: 133px;
+            .projects-wr__title__count-sildes{
+                opacity: 0;
+                transform: translateX(-50%);
+            }
+            .projects-wr__title__text{
+                left: 50%;
+                transform: translateX(-50%);
+                .name-project{
+                    color: #fff;
+                }
+            }
+            .view-project{
+                display: none;
+            }
+            .small-descr-project{
+                opacity: 1;
+            }
+        }
+        &__count-sildes{
+            position: absolute;
+            top:0;
+            left: 0;
+            color: #202020;
+            display: flex;
+            align-items: flex-start;
+            transition: 0.3s;
+            &__selected{
+                font-size: 98px;
+                line-height: 98px;
+                display: block;
+                width: 125px;
+            }
+            &__count{
+                font-size: 25px;
+                display: block;
+                position: relative;
+                top: 10px;
+            }
+        }
+        &__text{
+            position: relative;
+            left: 713px;
+            transition: 0.3s;
+           .name-project{
+                font-size: 98px;
+                color: #202020;
+                line-height: 98px;
+                text-transform: uppercase;
+                font-weight: $b;
+                transition: 0.3s;
+                letter-spacing: 0.04em;
+                margin-bottom: 33px;
+           }
+           
+           
+        }
+        .small-descr-project{
+            width: 100%;
+            position: relative;
+            transition: 0.3s;
+            opacity: 0;
+            &__text{
+                max-width: 700px;
+                width: 100%;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                top: 0;
+                text-align: center;
+                letter-spacing: 0.02em;
+                font-size: 25px;
+                color: #fff;
+                font-weight: $b;
+            }
+            
+        }
+        .view-project{
+            display: flex;
+            justify-content: center;
+            position: relative;
+            z-index: 20;
+            &__butt{
+                cursor: pointer;
+                color: #fff;
+                display: block;
+                text-align: center;
+                transition: 0.3s;
+                font-size: 25px;
+                letter-spacing: 0.02em;
+                padding: 24px 20px;
+                border-bottom: 1px solid #fff;
+                transition: 0.3s;
+                opacity: 0;
+                transform: translateY(50px);
+            }
+        }
+    }
+
+  
+    
 }
+
+
 .project__slide{
     position: absolute;
     top: 0;
@@ -13,22 +142,38 @@
     left: 0;
     width: 100%;
     padding-top: 230px;
+    transition: padding 0.3s;
     &.visible-scroll-bott{
-        animation: show-slide-to-top 0.23s linear forwards;
+        animation: show-slide-to-top 0.17s linear forwards;
     }
     &.hide-scroll-bott{
-        animation: hide-slide-to-top 0.23s linear forwards;
+        animation: hide-slide-to-top 0.17s linear forwards;
     }
     &.visible-scroll-top{
-        animation: show-slide-to-bott 0.23s linear forwards;
+        animation: show-slide-to-bott 0.17s linear forwards;
     }
     &.hide-scroll-top{
-        animation: hide-slide-to-bott 0.23s linear forwards;
+        animation: hide-slide-to-bott 0.17s linear forwards;
+    }
+    &.opened{
+        padding-top: 0;
+        .project__slide__closed-wrapp{
+            
+            height: 624px;
+        }
     }
     &__closed-wrapp{
         height: 330px;
         position: relative;
-          
+        background-position: center;
+        background-size: cover;
+        transition: 0.3s;
+        &.hover-project{
+            height: 400px;
+            .gradient-bg{
+                opacity: 0;
+            }
+        }
     }
     .gradient-bg{
         position: absolute;
@@ -36,6 +181,8 @@
         left: 0;
         width: 100%;
         height: 100%;
+        transition: 0.3s;
+        opacity: 1;
         &--1{
             background: linear-gradient(338.92deg, #F1637C 0%, #F88849 100.41%);
         }
