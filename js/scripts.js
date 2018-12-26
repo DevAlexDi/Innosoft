@@ -18,7 +18,9 @@ $(document).ready(function(){
 
     var activeSlide = 0;
     var canAnimate = true;
+    var isOpened = $('.projects-wr__title').hasClass('opened');
     var projectsName = ['yorso','investore','ITS'];
+    
     var projectsSmallDescr = [
         'The only online solution for traditional business',
         'Accessible and state-of-art online investments to commercial property',
@@ -67,7 +69,9 @@ $(document).ready(function(){
 
 
     elProjects.addEventListener("wheel", function (event) {
-        if(canAnimate && !hoveredProject){
+        isOpened = $('.projects-wr__title').hasClass('opened');
+        console.log(isOpened);
+        if(canAnimate && !hoveredProject && !isOpened){
             if(event.deltaY > 0){
                 canAnimate = false;
                 activeSlide += 1;
@@ -110,7 +114,14 @@ $(document).ready(function(){
       $('.projects-wr__title').addClass('opened');
    });
     
-    
+    //project close
+
+    $('.close-project').click(function(){
+        $('.project__slide--'+(activeSlide + 1)).removeClass('opened');
+        $('.projects-wr__title').removeClass('opened').removeClass('hover-project');
+        $('.project__slide__closed-wrapp').removeClass('hover-project');
+    });
+
 
 
     

@@ -31,6 +31,14 @@ p{
         margin: auto;
         width: 100%;
         white-space: normal;
+    }
+    &.visible-proj{
+        overflow: auto;
+        height: auto;
+        min-height: auto;
+        margin: 0;
+        width: 100%;
+        white-space: normal;
     } 
 }
 .main-container{
