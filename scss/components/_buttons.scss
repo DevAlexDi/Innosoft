@@ -38,3 +38,54 @@
         transform: rotate(45deg);  
     }
 }
+.open-close-menu{
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-830px);
+    height: 44px;
+    width: 48px;
+    z-index: 100;
+    background: transparent;
+    padding: 14px 0;
+    border: none;
+    outline: none;
+    display: none;
+    &.showed{
+        display: block;
+    }
+    &.opened{
+        &:before{
+            transform: rotate(-45deg);
+            top: 50%;
+        }
+        &:after{
+            transform: rotate(45deg);
+            bottom: calc(50% - 1px);
+        }
+    }
+    &:before{
+        content: "";
+        display: block;
+        position: absolute;
+        top: 14px;
+        height: 1px;
+        background: #D2D2D2;
+        left: 0;
+        width: 100%;
+        transform-origin: center;
+        transition: 0.3s;
+    }
+    &:after{
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: 13px;
+        height: 1px;
+        background: #D2D2D2;
+        left: 0;
+        width: 100%;
+        transform-origin: center;
+        transition: 0.3s;
+    }
+}

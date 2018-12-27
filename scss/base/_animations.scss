@@ -46,3 +46,22 @@
     }
   }
 
+  @keyframes animation-height {
+    0%{
+        height: 0px;
+    }
+    100% {
+        height: 624px;
+        
+    }
+  }
+  @keyframes animation-height-1500 {
+    0%{
+        height: 0px;
+    }
+    100% {
+        height: 400px;
+        
+    }
+  }
+

@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="app">
-        <div class="start always-hidden " id="start">
+        <div class="start always-hidden visible" id="start">
             <div class="start__background"></div>
             <div class="main-container">
                 <div class="start__logo">
@@ -28,7 +28,7 @@
                 <div class="menu__list">
                     <ul>
                         <li>
-                            <span>projects</span>
+                            <span data-href="#projects-wr">projects</span>
                         </li>
                         <li>
                             <span>about</span>
@@ -47,7 +47,10 @@
                 </div>
             </div>
         </div>
-        <div class="projects-wr always-hidden visible" >
+        <!--гамбургер меню-->
+        <button class="open-close-menu"></button>
+        <!--/гамбургер меню-->
+        <div class="projects-wr always-hidden" id="projects-wr">
             <div class="projects-wr__title">
                 <div class="main-container main-container--title-projects">
                     <p class="projects-wr__title__count-sildes">
@@ -56,7 +59,6 @@
                     </p>
                     <div class="projects-wr__title__text">
                         <p class="name-project">yorso</p>
-                        
                     </div>
                     <div class="small-descr-project">
                         <p class="small-descr-project__text">The only online solution for traditional business</p>
@@ -77,16 +79,50 @@
                         <div class="gradient-bg gradient-bg--1"></div>
                     </div>
                     <div class="proj-main-descr always-hidden">
+                        <div class="start__scroller start__scroller--scroller-projects-opened">
+                            <div class="start__scroller__line"></div>
+                        </div>
                         <div class="proj-main-descr__top">
                             <div class="proj-main-descr__top__width">
                                 <p>
-                                    Yorso is an online b2b platform for fish and seafood wholesale market. The service automates key business processes while decreasing transactional costs for 10-30%. At present the project team works on the implementation of Logistics Supply Chain concept and scaling to the new markets.
+                                    Yorso is an online b2b platform for fish 
+                                    and seafood wholesale market. The service automates key 
+                                    business processes while decreasing transactional costs 
+                                    for 10-30%. At present the project team works on the implementation 
+                                    of Logistics Supply Chain concept and scaling to the new markets.
                                 </p>
 
                             </div>
-
+                            <div class="proj-main-descr__top__width proj-main-descr__top__width--list">
+                                <div class="proj-main-descr__top__width__item">
+                                    <p>Transparent and convenient EDX</p>
+                                </div>
+                                <div class="proj-main-descr__top__width__item">
+                                    <p>Automate sales, purchase and logistics</p>
+                                </div>
+                                <div class="proj-main-descr__top__width__item">
+                                    <p>Scale to new markets</p>
+                                </div>
+                            </div>
+                            <div class="proj-main-descr__top__links">
+                                <div class="proj-main-descr__top__links__item
+                                            proj-main-descr__top__links__item--black">
+                                    <a href="https://yorso.com" target="_blank">
+                                        <span class="big-t">yorso.com</span>
+                                        <span class="sm-t">visit website</span>
+                                    </a>
+                                </div>
+                                <div class="proj-main-descr__top__links__item">
+                                    <span class="hover-zone-project">
+                                        <span class="big-t uppercase">INVESTORE</span>
+                                        <span class="sm-t">next project</span>
+                                    </span>
+                                    <div class="proj-main-descr__top__links__item--colored
+                                                proj-main-descr__top__links__item--color-1">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-
                     </div>
                 </div>
                 <div class="project__slide project__slide--2" id="proj-2">
@@ -98,6 +134,56 @@
                         </div>
                         <div class="gradient-bg gradient-bg--2"></div>
                     </div>
+                    <div class="proj-main-descr always-hidden">
+                        <div class="start__scroller start__scroller--scroller-projects-opened">
+                            <div class="start__scroller__line"></div>
+                        </div>
+                        <div class="proj-main-descr__top">
+                            <div class="proj-main-descr__top__width">
+                                <p>
+                                    Online investment tool to commercial property with the 
+                                    minimum input of 10000₽. The project is growing rapidly due 
+                                    to the accessibility to a wide range of investors. It plans 
+                                    to enter international investment markets. The high profitability 
+                                    up to 40% encourages clients not only to stay with the project 
+                                    but increase their investments to commercial property.
+                                </p>
+
+                            </div>
+                            <div class="proj-main-descr__top__width proj-main-descr__top__width--list">
+                                <div class="proj-main-descr__top__width__item">
+                                    <p>Helps make investments into 
+                                        commercial property</p>
+                                </div>
+                                <div class="proj-main-descr__top__width__item">
+                                    <p>Provides a passive income
+                                            with minimum investment</p>
+                                </div>
+                                <div class="proj-main-descr__top__width__item">
+                                    <p>Ensures deals transparency
+                                            and validity</p>
+                                </div>
+                            </div>
+                            <div class="proj-main-descr__top__links">
+                                <div class="proj-main-descr__top__links__item
+                                            proj-main-descr__top__links__item--black">
+                                    <a href="http://investore.club/" target="_blank">
+                                        <span class="big-t">investore.club</span>
+                                        <span class="sm-t">visit website</span>
+                                    </a>
+                                </div>
+                                <div class="proj-main-descr__top__links__item">
+                                    <span class="hover-zone-project">
+                                        <span class="big-t uppercase">ITS</span>
+                                        <span class="sm-t">next project</span>
+                                    </span>
+                                    <div class="proj-main-descr__top__links__item--colored
+                                                proj-main-descr__top__links__item--color-2">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="project__slide project__slide--3" id="proj-3">
                     <div class="project__slide__closed-wrapp" style="background-image: url(img/its.jpg)">
@@ -108,9 +194,63 @@
                         </div>
                         <div class="gradient-bg gradient-bg--3"></div>
                     </div>
+                    <div class="proj-main-descr always-hidden">
+                        <div class="start__scroller start__scroller--scroller-projects-opened">
+                            <div class="start__scroller__line"></div>
+                        </div>
+                        <div class="proj-main-descr__top">
+                            <div class="proj-main-descr__top__width">
+                                <p>
+                                    The project implements Smart City concept. 
+                                    In 2018 the project team brought two solutions for transport 
+                                    infrastructure optimization to the market. The first one 
+                                    is a software service to predict road state based on the 
+                                    meteorological data. The second solution is a software and hardware 
+                                    complex that analyzes traffic video data. 
+                                </p>
+                            </div>
+                            <div class="proj-main-descr__top__width proj-main-descr__top__width--list">
+                                <div class="proj-main-descr__top__width__item">
+                                    <p>Collect actual transport
+                                            infrastructure data</p>
+                                </div>
+                                <div class="proj-main-descr__top__width__item">
+                                    <p>Bring transparency
+                                            into road maintenance</p>
+                                </div>
+                                <div class="proj-main-descr__top__width__item">
+                                    <p>Analyze road traffic</p>
+                                </div>
+                            </div>
+                            <div class="proj-main-descr__top__links">
+                                <div class="proj-main-descr__top__links__item
+                                            proj-main-descr__top__links__item--black">
+                                    <a href="https://itcv.innosoft.pro/index" target="_blank">
+                                        <span class="big-t">itcv.innosoft.pro</span>
+                                        <span class="sm-t">visit website</span>
+                                    </a>
+                                </div>
+                                <div class="proj-main-descr__top__links__item">
+                                    <span class="hover-zone-project">
+                                        <span class="big-t uppercase">YORSO</span>
+                                        <span class="sm-t">next project</span>
+                                    </span>
+                                    <div class="proj-main-descr__top__links__item--colored
+                                                proj-main-descr__top__links__item--color-3">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
     
             </div>
+            
+         
+            <div class="start__scroller start__scroller--scroller-projects">
+                <div class="start__scroller__line"></div>
+            </div>
+            
         </div>
         
 
