@@ -3,7 +3,8 @@ $(document).ready(function(){
 
     var elStart = document.getElementById("start");
     var elProjects = document.getElementById("projects");
-    
+
+
     //start to menu
     elStart.addEventListener("wheel", function (event) {
         if(event.deltaY > 0){
@@ -203,6 +204,69 @@ $(document).ready(function(){
             return;
         }
     });
+
+
+
+
+    //=========== about ==============
+
+
+
+
+    var elAbout = document.getElementById("about");
+    var canAnimateAbout = true
+    var activeSlideAbout = 0;
+
+    function AboutClassesScrollBott(activeSlide){
+        var selectorNext = '.about-sl-'+(activeSlide + 1);
+        var selectorPrev =  '.about-sl-'+(activeSlide == 0? $('.about-sl__slide').length : activeSlide);
+        $(selectorPrev).removeClass('visible-scroll-bott hide-scroll-bott').addClass('hide-scroll-bott');
+        $(selectorPrev).find('.js-callback').bind('animationend webkitAnimationEnd', function() {
+            $(selectorPrev).removeClass('opened hide-scroll-bott');
+            $(selectorNext).addClass('opened visible-scroll-bott');
+            setTimeout(function(){
+                canAnimateAbout = true;
+            },500); 
+        });
+    }
+    function AboutClassesScrollTop(activeSlide){
+        var selectorNext = '.about-sl-'+(activeSlide + 1);
+        var selectorPrev =  '.about-sl-'+(activeSlide == ($('.about-sl__slide').length - 1) ? 1 : (activeSlide + 2));
+        $(selectorPrev).removeClass('visible-scroll-bott hide-scroll-bott').addClass('hide-scroll-bott');
+        $(selectorPrev).find('.js-callback').bind('animationend webkitAnimationEnd', function() {
+            $(selectorPrev).removeClass('opened hide-scroll-bott');
+            $(selectorNext).addClass('opened visible-scroll-bott');  
+            setTimeout(function(){
+                canAnimateAbout = true;
+            },500); 
+        });
+    }
+
+
+    elAbout.addEventListener("wheel", function (event) {
+        if(canAnimateAbout){
+            if(event.deltaY > 0){
+                canAnimateAbout = false;
+                activeSlideAbout += 1;
+                if(activeSlideAbout >= $('.about-sl__slide').length){
+                    activeSlideAbout = 0;
+                }
+                AboutClassesScrollBott(activeSlideAbout);
+            }
+            if(event.deltaY < 0){
+                canAnimateAbout = false;
+                activeSlideAbout -= 1;
+                if(activeSlideAbout < 0){
+                    activeSlideAbout = ($('.about-sl__slide').length - 1);
+                }
+                AboutClassesScrollTop(activeSlideAbout)
+            }
+        }
+    }, true);
+
+
+
+
 
 
     
