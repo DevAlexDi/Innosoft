@@ -9,7 +9,6 @@ $(document).ready(function(){
     elStart.addEventListener("wheel", function (event) {
         if(event.deltaY > 0){
             $('.start').removeClass('visible');
-            
             $('.menu').fadeIn(100,function(){
                 $('.menu').addClass('visible');
             });
@@ -23,7 +22,6 @@ $(document).ready(function(){
     var canAnimate = true;
     var isOpened = $('.projects-wr__title').hasClass('opened');
     var projectsName = ['yorso','investore','ITS'];
-    
     var projectsSmallDescr = [
         'The only online solution for traditional business',
         'Accessible and state-of-art online investments to commercial property',
@@ -36,9 +34,7 @@ $(document).ready(function(){
     function ProjectsClassesScrollBott(activeSlide){
         var selectorNext = '.project__slide--'+(activeSlide + 1);
         var selectorPrev =  '.project__slide--'+(activeSlide == 0? $('.project__slide').length : activeSlide);
-       
         $('.project__slide').removeClass('hide-scroll-bott visible-scroll-bott hide-scroll-top visible-scroll-top');
-       
         $(selectorPrev).addClass('hide-scroll-bott');
         $(selectorNext).addClass('visible-scroll-bott');
         $('.projects-wr__title__count-sildes__selected').text('0' + (activeSlide + 1));
@@ -195,12 +191,13 @@ $(document).ready(function(){
         $('.open-close-menu').addClass("showed");
         if ($(this).attr('data-href')) {
             var el = $(this).attr('data-href');
+            $('.page').removeClass('visible');
             $('.menu').fadeOut(200,function(){
                 $('.menu').removeClass('visible');
+                
                 $(el).addClass('visible');
                 $('.open-close-menu').removeClass('opened');
             });
-            
             return;
         }
     });
@@ -216,35 +213,108 @@ $(document).ready(function(){
     var elAbout = document.getElementById("about");
     var canAnimateAbout = true
     var activeSlideAbout = 0;
+    var timingChangeSlide = [750,750,850,450,450,450];
+
 
     function AboutClassesScrollBott(activeSlide){
         var selectorNext = '.about-sl-'+(activeSlide + 1);
         var selectorPrev =  '.about-sl-'+(activeSlide == 0? $('.about-sl__slide').length : activeSlide);
         $(selectorPrev).removeClass('visible-scroll-bott hide-scroll-bott').addClass('hide-scroll-bott');
-        $(selectorPrev).find('.js-callback').bind('animationend webkitAnimationEnd', function() {
+        console.log(selectorPrev);
+        $(selectorPrev+'-dot').removeClass('active-show-left active-hide-right active');
+        $(selectorPrev+'-dot').addClass('active-hide-right');
+        setTimeout(function(){
+            $(selectorNext+'-dot').addClass('active-show-left active');
             $(selectorPrev).removeClass('opened hide-scroll-bott');
             $(selectorNext).addClass('opened visible-scroll-bott');
+            if(activeSlide >= 2){
+                $('#about').addClass('white-bg');
+                $('.dots-about__list').addClass('black-style');
+                $('.open-close-menu').addClass('black-style')
+            }
+            else{
+                $('#about').removeClass('white-bg');
+                $('.dots-about__list').removeClass('black-style');
+                $('.open-close-menu').removeClass('black-style');
+            }
+            if(activeSlide >= 3){
+                $('.fixed-we-are').addClass('visible');
+                if(activeSlide == 4){
+                    $('.fixed-we-are').addClass('color-black');
+                }
+                else{
+                    $('.fixed-we-are').removeClass('color-black');
+                }
+                if(activeSlide == 5){
+                    $('.fixed-we-are').addClass('hiring-visible');
+                    $('.dots-about__list').removeClass('black-style');
+                    $('.open-close-menu').removeClass('black-style')
+                }
+                else{
+                    $('.fixed-we-are').removeClass('hiring-visible');
+                }
+            }
+            else{
+                $('.fixed-we-are').removeClass('visible');
+            }
             setTimeout(function(){
                 canAnimateAbout = true;
-            },500); 
-        });
+            },500);
+        },timingChangeSlide[activeSlide]);
     }
+
+
+    //если нужен скролл вверх
+
     function AboutClassesScrollTop(activeSlide){
         var selectorNext = '.about-sl-'+(activeSlide + 1);
         var selectorPrev =  '.about-sl-'+(activeSlide == ($('.about-sl__slide').length - 1) ? 1 : (activeSlide + 2));
         $(selectorPrev).removeClass('visible-scroll-bott hide-scroll-bott').addClass('hide-scroll-bott');
-        $(selectorPrev).find('.js-callback').bind('animationend webkitAnimationEnd', function() {
+        $(selectorPrev+'-dot').removeClass('active-show-left active-hide-right active');
+        setTimeout(function(){
+            $(selectorNext+'-dot').addClass('active-hide-right active');
             $(selectorPrev).removeClass('opened hide-scroll-bott');
-            $(selectorNext).addClass('opened visible-scroll-bott');  
+            $(selectorNext).addClass('opened visible-scroll-bott');
+            if(activeSlide >= 2){
+                $('#about').addClass('white-bg');
+                $('.dots-about__list').addClass('black-style');
+                $('.open-close-menu').addClass('black-style');
+            }
+            else{
+                $('#about').removeClass('white-bg');
+                $('.dots-about__list').removeClass('black-style');
+                $('.open-close-menu').removeClass('black-style');
+            }
+            if(activeSlide >= 3){
+                $('.fixed-we-are').addClass('visible');
+                if(activeSlide == 4){
+                    $('.fixed-we-are').addClass('color-black');
+                }
+                else{
+                    $('.fixed-we-are').removeClass('color-black');
+                }
+                if(activeSlide == 5){
+                    $('.fixed-we-are').addClass('hiring-visible');
+                    $('.dots-about__list').removeClass('black-style');
+                    $('.open-close-menu').removeClass('black-style')
+                }
+                else{
+                    $('.fixed-we-are').removeClass('hiring-visible');
+                }
+            }
+            else{
+                $('.fixed-we-are').removeClass('visible');
+            }
             setTimeout(function(){
                 canAnimateAbout = true;
             },500); 
-        });
+        },timingChangeSlide[activeSlide]);
     }
 
 
     elAbout.addEventListener("wheel", function (event) {
         if(canAnimateAbout){
+            
             if(event.deltaY > 0){
                 canAnimateAbout = false;
                 activeSlideAbout += 1;
@@ -253,6 +323,7 @@ $(document).ready(function(){
                 }
                 AboutClassesScrollBott(activeSlideAbout);
             }
+            //если нужен скролл вверх
             if(event.deltaY < 0){
                 canAnimateAbout = false;
                 activeSlideAbout -= 1;
@@ -262,6 +333,7 @@ $(document).ready(function(){
                 AboutClassesScrollTop(activeSlideAbout)
             }
         }
+       
     }, true);
 
 

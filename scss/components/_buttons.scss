@@ -57,11 +57,21 @@
     &.opened{
         &:before{
             transform: rotate(-45deg);
+            background: #D2D2D2!important;
             top: 50%;
         }
         &:after{
             transform: rotate(45deg);
+            background: #D2D2D2!important;
             bottom: calc(50% - 1px);
+        }
+    }
+    &.black-style{
+        &:before{
+            background: #202020;
+        }
+        &:after{
+            background: #202020;
         }
     }
     &:before{

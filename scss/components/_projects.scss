@@ -35,7 +35,7 @@
         transition: background-color 0.2s;
         .project__slide{
             padding-top: 0;
-            
+            animation-duration: 0s!important;
         }
         .start__scroller--scroller-projects{
             display: none;

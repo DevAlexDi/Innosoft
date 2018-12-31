@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="app">
-        <div class="start always-hidden" id="start">
+        <div class="start always-hidden visible" id="start">
             <div class="start__background"></div>
             <div class="main-container">
                 <div class="start__logo">
@@ -50,7 +50,7 @@
         <!--гамбургер меню-->
         <button class="open-close-menu"></button>
         <!--/гамбургер меню-->
-        <div class="projects-wr always-hidden" id="projects-wr">
+        <div class="projects-wr page always-hidden" id="projects-wr">
             <div class="projects-wr__title">
                 <div class="main-container main-container--title-projects">
                     <p class="projects-wr__title__count-sildes">
@@ -252,10 +252,19 @@
             </div>
             
         </div>
-        <div class="about always-hidden visible" id="about">
+        <div class="about page always-hidden" id="about">
+            <div class="dots-about">
+                <ul class="dots-about__list">
+                    <li class="dots-about__list__item about-sl-1-dot active active-show-left"></li>
+                    <li class="dots-about__list__item about-sl-2-dot"></li>
+                    <li class="dots-about__list__item about-sl-3-dot"></li>
+                    <li class="dots-about__list__item about-sl-4-dot"></li>
+                    <li class="dots-about__list__item about-sl-5-dot"></li>
+                    <li class="dots-about__list__item about-sl-6-dot"></li>
+                </ul>
+            </div>
             <div class="about-sl">
                 <div class="about-sl__slide about-sl-1 opened visible-scroll-bott">
-                    <div class="js-callback"></div>
                     <div class="about-sl-1__wrapp">
                         <div class="main-container main-container--about">
                             <h3 class="about-sl-1__wrapp__title">
@@ -306,7 +315,6 @@
                     </div>
                 </div>
                 <div class="about-sl__slide about-sl-2 ">
-                    <div class="js-callback"></div>
                     <div class="about-sl-2__wrapp">
                         <div class="main-container main-container--about">
                             <div class="about-sl-2__wrapp__list">
@@ -341,7 +349,6 @@
 
                 </div>
                 <div class="about-sl__slide about-sl-3">
-                    <div class="js-callback"></div>
                     <div class="about-sl-3__wrapp">
                         <div class="main-container main-container--about">
                             <h3 class="about-sl-3__wrapp__title">
@@ -416,10 +423,88 @@
 
                         </div>
                     </div>
+                </div>
+                <div class="fixed-we-are">
+                    <p>we<br><span>are <span class="hiring-span">hiring</span></span></p>
+                </div>
+                <div class="about-sl__slide about-sl-4 ">
+                    <div class="about-sl-4__wrapp">
+                        <div class="about-sl-4__wrapp__photo" style="background-image: url(img/team.jpg)"></div>
+                    </div>
+                </div>
+                <div class="about-sl__slide about-sl-5">
+                    <div class="about-sl-5__wrapp">
+                        <div class="about-sl-5__wrapp__line">
+                            <h6>
+                                <span>guru</span>
+                            </h6>
+                            <p>
+                                <span>of quality software development</span>
+                            </p>
+                        </div>
+                        <div class="about-sl-5__wrapp__line">
+                            <h6>
+                                <span>great</span>
+                            </h6>
+                            <p>
+                                <span>presenters and value seekers</span>
+                            </p>
+                        </div>
+                        <div class="about-sl-5__wrapp__line">
+                            <h6>
+                                <span>Hackers</span>
+                            </h6>
+                            <p>
+                                <span>music lovers and<br>
+                                        sport addicted</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-sl__slide about-sl-6 ">
+                    <div class="about-sl-6__wrapp">
+                        <div class="about-sl-6__wrapp__top"></div>
+                        <div class="about-sl-6__wrapp__bott">
+                            <div class="main-container main-container--about">
+                                <div class="flex-hiring">
+                                    <div class="flex-hiring__left">
+                                        <h6 class="flex-hiring__left__title">Avalable<br>vacancies</h6>
+                                        <ul class="flex-hiring__left__list">
+                                            <li>Product manager</li>
+                                            <li>Front-end developer</li>
+                                            <li>UX/UI designer</li>
+                                            <li>Pizza delivery man</li>
+                                        </ul>
+                                    </div>
+                                    <div class="flex-hiring__right">
+                                        <h6 class="flex-hiring__right__title">
+                                            Write to us if you think<br> 
+                                            you can be part of our team
+                                        </h6>
+                                        <form class="flex-hiring__right__form">
+                                            <div class="flex-hiring__right__form__top">
+                                                <div class="flex-hiring__right__form__top__side">
+                                                    <input type="text" placeholder="Name">
+                                                </div>
+                                                <div class="flex-hiring__right__form__top__side">
+                                                    <input type="email" placeholder="E-mail">
+                                                </div>
+                                            </div>
+                                            <div class="flex-hiring__right__form__bott">
+                                                <div class="flex-hiring__right__form__bott__side">
+                                                    <textarea placeholder="Your message"></textarea>
+                                                </div>
+                                                <div class="flex-hiring__right__form__bott__side">
+                                                    <button type="submit">Submit</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>   
+                                </div>
+                            </div>
 
-
-
-
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
