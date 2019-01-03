@@ -69,5 +69,10 @@ p{
         display: block;
         width: 100%;
     }
+    &--news{
+        padding: 0 64px;
+        display: block;
+        width: 100%;
+        position: static;
+    }
 }
-

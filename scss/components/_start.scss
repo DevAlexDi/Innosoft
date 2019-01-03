@@ -65,7 +65,15 @@
             left: 50%;
             transform: translateX(-760px);
             .start__scroller__line{
-              
+                background: #2B2B2B;
+            }
+        }
+        &--scroller-news{
+            position: relative;
+            margin: 0;
+            z-index: 10;
+            left: -16px;
+            .start__scroller__line{
                 background: #2B2B2B;
             }
         }

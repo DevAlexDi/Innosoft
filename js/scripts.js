@@ -310,8 +310,6 @@ $(document).ready(function(){
             },500); 
         },timingChangeSlide[activeSlide]);
     }
-
-
     elAbout.addEventListener("wheel", function (event) {
         if(canAnimateAbout){
             
@@ -337,6 +335,67 @@ $(document).ready(function(){
     }, true);
 
 
+
+    //news
+
+    var activeSlideNews = 0;
+
+
+    function newsScrollBott(activeSlide){
+        var indexNext = activeSlide + 1;
+        var indexPrev =  (activeSlide == 0 ? $('.tab-pane.active .new-content__counter__item .news-animation').length : activeSlide);
+        $('.news-animation').removeClass('hide-scroll-bott visible-scroll-bott hide-scroll-top visible-scroll-top');
+        $('.news-animation:nth-child('+indexPrev+')').addClass('hide-scroll-bott');
+        $('.news-animation:nth-child('+indexNext+')').addClass('visible-scroll-bott');
+        setTimeout(function(){
+            canAnimate = true;
+        },500); 
+       
+    }
+    function newsScrollTop(activeSlide){
+        var indexNext = activeSlide + 1;
+        var indexPrev =  activeSlide == ($('.tab-pane.active .new-content__counter__item .news-animation').length - 1) ? 1 : (activeSlide + 2);
+        $('.news-animation').removeClass('hide-scroll-bott visible-scroll-bott hide-scroll-top visible-scroll-top');
+        $('.news-animation:nth-child('+indexPrev+')').addClass('hide-scroll-top');
+        $('.news-animation:nth-child('+indexNext+')').addClass('visible-scroll-top');
+        setTimeout(function(){
+            canAnimate = true;
+        },500); 
+      
+
+    }
+
+
+    $('.news-wrapp__right, .cube-bg').on('mousewheel', function (event) {
+        if(canAnimate){
+            if(event.originalEvent.deltaY > 0){
+                canAnimate = false;
+                activeSlideNews += 1;
+                if(activeSlideNews >= $('.tab-pane.active .new-content__counter__item .news-animation').length){
+                    activeSlideNews = 0;
+                }
+                newsScrollBott(activeSlideNews);
+            }
+            if(event.originalEvent.deltaY < 0){
+                canAnimate = false;
+                activeSlideNews -= 1;
+                if(activeSlideNews < 0){
+                    activeSlideNews = ($('.tab-pane.active .new-content__counter__item .news-animation').length - 1);
+                }
+                
+                newsScrollTop(activeSlideNews)
+            }
+        }
+    });
+
+
+    $('.nav-tabs li a').click(function(){
+        var id = $(this).attr('href');
+        activeSlideNews = 0;
+        $('.news-animation').removeClass('hide-scroll-bott visible-scroll-bott hide-scroll-top visible-scroll-top');
+        console.log(id);
+        $(id + ' .news-animation:nth-child(1)').addClass('visible-scroll-bott')
+    });
 
 
 
