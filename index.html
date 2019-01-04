@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="app">
-        <div class="start always-hidden visible" id="start">
+        <div class="start always-hidden " id="start">
             <div class="start__background"></div>
             <div class="main-container">
                 <div class="start__logo">
@@ -37,7 +37,7 @@
                             <span data-href="#news">news</span>
                         </li>
                         <li>
-                            <span>contacts</span>
+                            <span data-href="#contacts">contacts</span>
                         </li>
                     </ul>
                     <div class="menu__list__footer">
@@ -616,7 +616,41 @@
                                 </div>
                             </div>
                             <div id="news-tab-3" class="tab-pane fade">
-                                
+                                <div class="new-content">
+                                    <div class="new-content__counter">
+                                        <div class="new-content__counter__item">
+                                            <span class="news-animation visible-scroll-bott">01</span>
+                                            <span class="news-animation">02</span>
+                                        </div>
+                                        <span> — 02</span>
+                                    </div>
+                                    <p class="new-content__title">
+                                        <a class="new-content__title__link news-animation visible-scroll-bott" href="#" target="_blank">
+                                            111111
+                                        </a>
+                                        <a class="new-content__title__link news-animation" href="#" target="_blank">
+                                            2222222222222222 222222
+                                        </a>
+                                    </p>
+                                    <div class="new-content__text">
+                                        <p class="new-content__text__item news-animation visible-scroll-bott">
+                                            1111111111
+                                        </p>
+                                        <p class="new-content__text__item news-animation">
+                                            2222222222222222 222222 2222222222222222 222222 2222222222222222 222222
+                                        </p>
+                                        
+                                    </div>
+                                    <div class="new-content__link">
+                                        <a class="new-content__link__item news-animation visible-scroll-bott" href="#" target="_blank">Read in source</a>
+                                        <a class="new-content__link__item news-animation" href="#" target="_blank">Read in source</a>
+                                        
+                                    </div>
+                                    
+                                    <div class="start__scroller start__scroller--scroller-news">
+                                        <div class="start__scroller__line"></div>
+                                    </div>
+                                </div>
 
                             </div>
                         </div>
@@ -628,33 +662,85 @@
                 <div class="cube-bg__animation"></div>
             </div>
         </div>
-         
+        <div class="contacts page always-hidden visible" id="contacts">
+            <div class="contacts__wrapp form-mode">
+                <div class="contacts__wrapp__top">
+                    <div class="main-container main-container--about">
+                        <h2 class="contacts__wrapp__top__title">
+                            <span>contacts</span>
+                        </h2>
+                    </div>
+                </div>
+                <div class="contacts__wrapp__bott">
+                    <div class="main-container main-container--about">
+                        <div class="rel-contacts-wrapp">
+                            <div class="flex-contacts">
+                                <div class="flex-contacts__left">
+                                    <ul class="flex-contacts__left__list">
+                                        <li>info@innosoft.pro</li>
+                                        <li>+7 (963) 686-63-86</li>
+                                        <li>Universitetskaya st 7,<br> Innopolis, Russia, 420500</li>
+                                    </ul>
+                                    <div class="flex-contacts__left__button">
+                                        <button>view on the map</button>
+                                    </div>
+                                </div>
+                                <div class="flex-contacts__right">
+                                    <h6 class="flex-contacts__right__title">
+                                        Write us for additional information<br>and how we can help you
+                                    </h6>
+                                    <form class="flex-contacts__right__form">
+                                        <div class="flex-contacts__right__form__top">
+                                            <div class="flex-contacts__right__form__top__side">
+                                                <input type="text" placeholder="Name">
+                                            </div>
+                                            <div class="flex-contacts__right__form__top__side">
+                                                <input type="email" placeholder="E-mail">
+                                            </div>
+                                        </div>
+                                        <div class="flex-contacts__right__form__bott">
+                                            <div class="flex-contacts__right__form__bott__side">
+                                                <textarea placeholder="Your message"></textarea>
+                                            </div>
+                                            <div class="flex-contacts__right__form__bott__side">
+                                                <button type="submit">Submit</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>   
+                            </div>
+                            <div class="addresses">
+                                <h4 class="addresses__title">Our offices</h4>
+                                <div class="addresses__list">
+                                    <div class="addresses__list__item">
+                                        <p class="addresses__list__item__title">Innopolis</p>
+                                        <p class="addresses__list__item__where-1">R&D center</p>
+                                        <p class="addresses__list__item__where-2">Universitetskaya st 7, Innopolis, Russia, 420500</p>
+                                    </div>
+                                    <div class="addresses__list__item">
+                                        <p class="addresses__list__item__title">Tallinn</p>
+                                        <p class="addresses__list__item__where-1">HQ Europe, Sales and Procurements</p>
+                                        <p class="addresses__list__item__where-2">Kiriku st 6, Tallinn, Estonia, 10130</p>
+                                    </div>
+                                    <div class="addresses__list__item">
+                                        <p class="addresses__list__item__title">Moscow</p>
+                                        <p class="addresses__list__item__where-1">HQ Russia, R&D center, Sales and Procurements</p>
+                                        <p class="addresses__list__item__where-2">1-Brestskaya st 35, Moscow, Russia, 125047</p>
+                                    </div>
+                                    <div class="addresses__list__item">
+                                        <p class="addresses__list__item__title">Kaliningrad</p>
+                                        <p class="addresses__list__item__where-1">R&D center, Logistics</p>
+                                        <p class="addresses__list__item__where-2">Uralskaya st 18, Kaliningrad, Russia, 236022</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
+                </div>
+            </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        </div>
     </div>
 
     
