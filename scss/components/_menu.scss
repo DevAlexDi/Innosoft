@@ -1,7 +1,5 @@
 @import "layout/var";
 
-
-
 .menu{
     background-color: #202020;
     position: absolute;
@@ -37,11 +35,23 @@
             list-style: none;
             margin: 0;
             padding: 167px 0;
+            @media (max-width: 1919px){
+                padding: 139px 0;
+            }
+            @media (max-width: 1599px){
+                padding: 113px 0;
+            }
+            @media (max-width: 1365px){
+                padding: 137px 0;
+            }
             li{
                 margin-bottom: 20px;
                 display: flex;
                 position: relative;
                 overflow: hidden;
+                @media (max-width: 1919px){
+                    margin-bottom: 15px;
+                }
                 &:nth-child(1){
                     span{
                         transition-delay: .25s;
@@ -98,5 +108,4 @@
             }
         }
     }
-
 }

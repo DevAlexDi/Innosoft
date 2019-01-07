@@ -8,15 +8,18 @@ $(document).ready(function(){
     //start to menu
     elStart.addEventListener("wheel", function (event) {
         if(event.deltaY > 0){
-            $('.start').removeClass('visible');
-            $('.menu').fadeIn(100,function(){
-                $('.menu').addClass('visible');
+            $('.start').fadeOut(200,function(){
+                $('.start').removeClass('visible');
+                $('.menu').fadeIn(100,function(){
+                    $('.menu').addClass('visible');
+                });
             });
+            
         }
     }, true);
 
 
-    //projects scroll
+    //==========projects===================
 
     var activeSlide = 0;
     var canAnimate = true;
@@ -185,6 +188,15 @@ $(document).ready(function(){
         
     });
 
+    function closeProjectOnChangePage(){
+        $('.project__slide').removeClass('hide-scroll-bott visible-scroll-bott hide-scroll-top visible-scroll-top scrolled-proj opened');
+        $('.projects-wr__title').removeClass('opened');
+        $('.projects-wr__title').removeClass('opened hover-project scrolled-proj')
+        $('.project__slide__closed-wrapp').removeClass('hover-project');
+        $('.projects-wr').removeClass('project-opened');
+        activeSlide = 0; 
+    }
+
     //open section from menu
 
     $('.menu__list li span').click(function (e) {
@@ -192,9 +204,11 @@ $(document).ready(function(){
         if ($(this).attr('data-href')) {
             var el = $(this).attr('data-href');
             $('.page').removeClass('visible');
+            closeProjectOnChangePage();
+            
             $('.menu').fadeOut(200,function(){
                 $('.menu').removeClass('visible');
-                
+                $('.project__slide:first-child()').addClass('visible-scroll-bott');
                 $(el).addClass('visible');
                 $('.open-close-menu').removeClass('opened');
             });
@@ -207,20 +221,15 @@ $(document).ready(function(){
 
     //=========== about ==============
 
-
-
-
     var elAbout = document.getElementById("about");
     var canAnimateAbout = true
     var activeSlideAbout = 0;
     var timingChangeSlide = [750,750,850,450,450,450];
 
-
     function AboutClassesScrollBott(activeSlide){
         var selectorNext = '.about-sl-'+(activeSlide + 1);
         var selectorPrev =  '.about-sl-'+(activeSlide == 0? $('.about-sl__slide').length : activeSlide);
         $(selectorPrev).removeClass('visible-scroll-bott hide-scroll-bott').addClass('hide-scroll-bott');
-        console.log(selectorPrev);
         $(selectorPrev+'-dot').removeClass('active-show-left active-hide-right active');
         $(selectorPrev+'-dot').addClass('active-hide-right');
         setTimeout(function(){
@@ -262,9 +271,6 @@ $(document).ready(function(){
             },500);
         },timingChangeSlide[activeSlide]);
     }
-
-
-    //если нужен скролл вверх
 
     function AboutClassesScrollTop(activeSlide){
         var selectorNext = '.about-sl-'+(activeSlide + 1);
@@ -310,9 +316,9 @@ $(document).ready(function(){
             },500); 
         },timingChangeSlide[activeSlide]);
     }
+
     elAbout.addEventListener("wheel", function (event) {
         if(canAnimateAbout){
-            
             if(event.deltaY > 0){
                 canAnimateAbout = false;
                 activeSlideAbout += 1;
@@ -321,7 +327,6 @@ $(document).ready(function(){
                 }
                 AboutClassesScrollBott(activeSlideAbout);
             }
-            //если нужен скролл вверх
             if(event.deltaY < 0){
                 canAnimateAbout = false;
                 activeSlideAbout -= 1;
@@ -331,7 +336,6 @@ $(document).ready(function(){
                 AboutClassesScrollTop(activeSlideAbout)
             }
         }
-       
     }, true);
 
 
@@ -339,7 +343,6 @@ $(document).ready(function(){
     //news
 
     var activeSlideNews = 0;
-
 
     function newsScrollBott(activeSlide){
         var indexNext = activeSlide + 1;
@@ -360,9 +363,7 @@ $(document).ready(function(){
         $('.news-animation:nth-child('+indexNext+')').addClass('visible-scroll-top');
         setTimeout(function(){
             canAnimate = true;
-        },500); 
-      
-
+        },500);
     }
 
 
@@ -382,7 +383,6 @@ $(document).ready(function(){
                 if(activeSlideNews < 0){
                     activeSlideNews = ($('.tab-pane.active .new-content__counter__item .news-animation').length - 1);
                 }
-                
                 newsScrollTop(activeSlideNews)
             }
         }
@@ -393,14 +393,21 @@ $(document).ready(function(){
         var id = $(this).attr('href');
         activeSlideNews = 0;
         $('.news-animation').removeClass('hide-scroll-bott visible-scroll-bott hide-scroll-top visible-scroll-top');
-        console.log(id);
         $(id + ' .news-animation:nth-child(1)').addClass('visible-scroll-bott')
     });
 
 
+    // contacts
 
+    $('.change-to-adress').click(function(){
+        $('.contacts__wrapp').removeClass('form-mode');
+        $('.contacts__wrapp').addClass('map-mode');
+    });
 
-    
+    $('.change-to-contacts').click(function(){
+        $('.contacts__wrapp').removeClass('map-mode');
+        $('.contacts__wrapp').addClass('form-mode');
+    });
 });
 
 

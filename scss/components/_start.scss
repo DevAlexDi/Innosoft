@@ -27,6 +27,12 @@
         margin-bottom: 60px;
         transition: 0.5s;
         opacity: 0;
+        @media (max-width: 1599px){
+            margin-bottom: 40px;
+        }
+        @media (max-width: 1365px){
+            margin-bottom: 120px;
+        }
         img{
             margin: 0 auto;
         }
@@ -43,20 +49,24 @@
         &--scroller-projects{
             position: fixed;
             z-index: 10;
-            bottom: 192px;
-            left: 50%;
-            transform: translateX(-760px);
-            .start__scroller__line{
-                width: 1px;
-            }
-        }
-        &--scroller-projects{
-            position: fixed;
-            z-index: 10;
             top: 840px;
             left: 50%;
             transform: translateX(-760px);
-            
+            @media (max-width: 1919px){
+                top: 740px;
+                transform: translateX(-670px);
+            }
+            @media (max-width: 1599px){
+                top: 608px;
+                transform: translateX(-670px);
+            }
+            @media (max-width: 1365px){
+                top: 800px;
+                transform: translateX(-575px);
+            }
+            .start__scroller__line{
+                width: 1px;
+            }
         }
         &--scroller-projects-opened{
             position: fixed;
@@ -66,6 +76,32 @@
             transform: translateX(-760px);
             .start__scroller__line{
                 background: #2B2B2B;
+            }
+            @media (max-width: 1919px){
+                top: 740px;
+                transform: translateX(-670px);
+            }
+            @media (max-width: 1599px){
+                top: 608px;
+                transform: translateX(-670px);
+            }
+            @media (max-width: 1365px){
+                top: 800px;
+                transform: translateX(-575px);
+            }
+        }
+        &--scroller-about{
+            position: absolute;
+            top: calc(100% + 110px);
+            left: -16px;
+            @media (max-width: 1919px){
+                top: calc(100% + 80px);
+            }
+            @media (max-width: 1599px){
+                top: calc(100% + 45px);
+            }
+            @media (max-width: 1365px){
+                top: calc(100% + 75px);
             }
         }
         &--scroller-news{
@@ -84,6 +120,5 @@
             background: rgba(255, 255, 255, 0.8);
             animation: line-move 2s ease-out infinite;
         }
-        
     }
 }

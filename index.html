@@ -8,11 +8,10 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" href="css/style.min.css"/>
-  
 </head>
 <body>
     <div class="app">
-        <div class="start always-hidden " id="start">
+        <div class="start always-hidden visible" id="start">
             <div class="start__background"></div>
             <div class="main-container">
                 <div class="start__logo">
@@ -309,9 +308,13 @@
                                     </h5>
                                     <p>Aspiration to experiments and development. Good command of proven technologies.</p>
                                 </div>
+                                <div class="start__scroller start__scroller--scroller-about">
+                                    <div class="start__scroller__line"></div>
+                                </div>
                             </div>
 
                         </div>
+                        
                     </div>
                 </div>
                 <div class="about-sl__slide about-sl-2 ">
@@ -662,13 +665,19 @@
                 <div class="cube-bg__animation"></div>
             </div>
         </div>
-        <div class="contacts page always-hidden visible" id="contacts">
+        <div class="contacts page always-hidden " id="contacts">
             <div class="contacts__wrapp form-mode">
                 <div class="contacts__wrapp__top">
                     <div class="main-container main-container--about">
                         <h2 class="contacts__wrapp__top__title">
                             <span>contacts</span>
                         </h2>
+                    </div>
+                    <div class="contacts__wrapp__top__map">
+                        <div class="contacts__wrapp__top__map__circle circle-1"></div>
+                        <div class="contacts__wrapp__top__map__circle circle-2"></div>
+                        <div class="contacts__wrapp__top__map__circle circle-3"></div>
+                        <div class="contacts__wrapp__top__map__circle circle-4"></div>
                     </div>
                 </div>
                 <div class="contacts__wrapp__bott">
@@ -682,7 +691,7 @@
                                         <li>Universitetskaya st 7,<br> Innopolis, Russia, 420500</li>
                                     </ul>
                                     <div class="flex-contacts__left__button">
-                                        <button>view on the map</button>
+                                        <button class="change-to-adress">view on the map</button>
                                     </div>
                                 </div>
                                 <div class="flex-contacts__right">
@@ -732,6 +741,9 @@
                                         <p class="addresses__list__item__where-1">R&D center, Logistics</p>
                                         <p class="addresses__list__item__where-2">Uralskaya st 18, Kaliningrad, Russia, 236022</p>
                                     </div>
+                                </div>
+                                <div class="flex-contacts__left__button">
+                                    <button class="change-to-contacts">back to contacts</button>
                                 </div>
                             </div>
                         </div>

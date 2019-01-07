@@ -51,6 +51,18 @@ p{
     padding: 156px 64px 32px 64px;
     display: flex;
     flex-direction: column;
+    @media (max-width: 1919px){
+        padding: 100px 64px 32px 64px;
+        max-width: 1344px;
+    }
+    @media (max-width: 1599px){
+        padding: 64px 64px 32px 64px;
+        max-width: 1238px;
+    }
+    @media (max-width: 1365px){
+        padding: 160px 64px 32px 64px;
+        max-width: 1152px;
+    }
     &--menu{
         min-height: 100vh;
         display: flex;
@@ -62,7 +74,7 @@ p{
         position: relative;
         flex-direction: row;
         flex-wrap: wrap;
-        
+        pointer-events: none;
     }
     &--about{
         padding: 0 64px;

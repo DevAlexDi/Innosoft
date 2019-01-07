@@ -39,6 +39,15 @@
         right: 0;
         width: 60%;
         height: 792px;
+        @media (max-width: 1919px){
+            height: 674px;
+        }
+        @media (max-width: 1599px){
+            height: 576px;
+        }
+        @media (max-width: 1365px){
+            height: 674px;
+        }
         &__animation{
             background: #fff;
             position: absolute;
@@ -85,6 +94,15 @@
     &__left{
         width: 45%;
         padding-top: 265px;
+        @media (max-width: 1919px){
+            padding-top: 227px;
+        }
+        @media (max-width: 1599px){
+            padding-top: 161px;
+        }
+        @media (max-width: 1365px){
+            padding-top: 265px;
+        }
         h3{
             margin: 0;
             position: relative;
@@ -107,6 +125,15 @@
         position: relative;
         z-index: 30;
         max-width: 615px;
+        @media (max-width: 1919px){
+            padding-top: 247px;
+        }
+        @media (max-width: 1599px){
+            padding-top: 181px;
+        }
+        @media (max-width: 1365px){
+            padding-top: 275px;
+        }
     }
 }
 .new-content{

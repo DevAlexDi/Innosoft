@@ -1,6 +1,5 @@
 @import "layout/var";
 
-
 .projects-wr{
     background-color: #202020;
     position: relative;
@@ -30,7 +29,6 @@
     .start__scroller--scroller-projects{
         position: absolute;
     }
-    
     &.project-opened{
         background-color: #fff;
         transition: background-color 0.2s;
@@ -52,6 +50,16 @@
         left: 0;
         width: 100%;
         transition: top 0.3s;
+        
+        @media (max-width: 1919px){
+            top: 227px;
+        }
+        @media (max-width: 1599px){
+            top: 170px;
+        }
+        @media (max-width: 1365px){
+            top: 289px;
+        }
         &.hover-project{
             .projects-wr__title__count-sildes{
                 opacity: 0;
@@ -70,10 +78,19 @@
                     transform: translateY(0);
                 }
             }
-            
         }
         &.opened{
             top: 133px;
+            pointer-events: none;
+            @media (max-width: 1919px){
+                top: 100px;
+            }
+            @media (max-width: 1599px){
+                top: 65px;
+            }
+            @media (max-width: 1365px){
+                top: 133px;
+            }    
             .projects-wr__title__count-sildes{
                 opacity: 0;
                 transform: translateX(-50%);
@@ -95,7 +112,6 @@
                 .projects-wr__title__text{
                     .name-project{
                         color: #000;
-
                     }
                 }
                 .small-descr-project__text{
@@ -106,7 +122,7 @@
         &__count-sildes{
             position: absolute;
             top:0;
-            left: 0;
+            left: 64px;
             color: #202020;
             display: flex;
             align-items: flex-start;
@@ -128,6 +144,15 @@
             position: relative;
             left: 713px;
             transition: 0.3s;
+            @media (max-width: 1919px){
+                left: 410px;
+            }
+            @media (max-width: 1599px){
+                left: 375px;
+            }
+            @media (max-width: 1365px){
+                left: 350px;
+            }
            .name-project{
                 font-size: 98px;
                 color: #202020;
@@ -138,8 +163,6 @@
                 letter-spacing: 0.04em;
                 margin-bottom: 33px;
            }
-           
-           
         }
         .small-descr-project{
             width: 100%;
@@ -160,7 +183,6 @@
                 font-weight: $b;
                 transition: color 0.3s;
             }
-            
         }
         .view-project{
             display: flex;
@@ -182,12 +204,8 @@
                 transform: translateY(50px);
             }
         }
-    }
-
-  
-    
+    } 
 }
-
 
 .project__slide{
     position: absolute;
@@ -198,12 +216,29 @@
     width: 100%;
     padding-top: 230px;
     transition: padding 0.3s;
-   
+    @media (max-width: 1919px){
+        padding-top: 210px;
+    }
+    @media (max-width: 1599px){
+        padding-top: 160px;
+    }
+    @media (max-width: 1365px){
+        padding-top: 270px;
+    }
     &.opened{
         padding-top: 0;
         animation-duration: 0s;
         .project__slide__closed-wrapp{
             height: 624px;
+            @media (max-width: 1919px){
+                height: 550px;
+            }
+            @media (max-width: 1599px){
+                height: 450px;
+            }
+            @media (max-width: 1365px){
+                height: 608px;
+            }
         }
        .gradient-bg{
             display: none;
@@ -222,7 +257,6 @@
             &__top{
                 &__width{
                     opacity: 1;
-                
                 }
             }
         }
@@ -230,7 +264,6 @@
             .project__slide__closed-wrapp{
                 height: 0;
             }
-           
             .proj-main-descr{
                 &__top{
                     &__width{
@@ -244,7 +277,6 @@
             
         }
     }
-    
     .close-project-wrapp{
         position: absolute;
         display: none;
@@ -255,9 +287,17 @@
             position: relative;
             display: flex;
             justify-content: flex-end;
-            max-width: 1540px;
+            max-width: 1536px;
             margin: 0 auto;
-            
+            @media (max-width: 1919px){
+                max-width: 1344px;
+            }
+            @media (max-width: 1599px){
+                max-width: 1238px;
+            }
+            @media (max-width: 1365px){
+                max-width: 1152px;
+            }
         }
     }
     .proj-main-descr{
@@ -265,13 +305,11 @@
         position: relative;
         transition: opacity 0.3s;
         opacity: 0;
-       
         &__top{
             height: 100vh;
             transition: height 0.3s;
             display: flex;
             flex-direction: column;
-
             &__width{
                 width: 100%;
                 max-width: 966px;
@@ -280,7 +318,15 @@
                 padding-top: 415px;
                 transform: translateY(-305px);
                 transition: transform 0.3s, opacity 0.3s 0.3s;
-                
+                @media (max-width: 1919px){
+                    padding-top: 395px;
+                }
+                @media (max-width: 1599px){
+                    padding-top: 375px;
+                }
+                @media (max-width: 1365px){
+                    padding-top: 395px;
+                }              
                 &--list{
                     display: flex;
                     align-items: flex-start;
@@ -323,6 +369,13 @@
                     justify-content: center;
                     align-items: center;
                     position: relative;
+                    @media (max-width: 1919px){
+                        height: 128px;
+                    }
+                    
+                    @media (max-width: 1365px){
+                        height: 192px;
+                    }
                     &--black{
                         background: #202020
                     }
@@ -441,13 +494,30 @@
         background-position: center;
         background-size: cover;
         transition: 0.3s;
+        @media (max-width: 1919px){
+            height: 280px;
+        }
+        @media (max-width: 1599px){
+            height: 240px;
+        }
+        @media (max-width: 1365px){
+            height: 280px;
+        }
         &.hover-project{
             height: 400px;
+            @media (max-width: 1919px){
+                height: 340px;
+            }
+            @media (max-width: 1599px){
+                height: 290px;
+            }
+            @media (max-width: 1365px){
+                height: 335px;
+            }
             .gradient-bg{
                 opacity: 0;
             }
         }
-        
     }
     .gradient-bg{
         position: absolute;
@@ -467,4 +537,7 @@
             background: linear-gradient(333.86deg, #6D0DE8 0%, #4FFFEA 100.41%);
         }
     }
+}
+.rel-wr{
+    position: relative;
 }

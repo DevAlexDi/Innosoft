@@ -42,7 +42,7 @@
     position: fixed;
     top: 50px;
     left: 50%;
-    transform: translateX(-830px);
+    transform: translateX(-756px);
     height: 44px;
     width: 48px;
     z-index: 100;
@@ -51,6 +51,15 @@
     border: none;
     outline: none;
     display: none;
+    @media (max-width: 1919px){
+        transform: translateX(-670px);
+    }
+    @media (max-width: 1599px){
+        transform: translateX(-620px);
+    }
+    @media (max-width: 1365px){
+        transform: translateX(-575px);
+    }
     &.showed{
         display: block;
     }
@@ -68,10 +77,10 @@
     }
     &.black-style{
         &:before{
-            background: #202020;
+            //background: #202020;
         }
         &:after{
-            background: #202020;
+            //background: #202020;
         }
     }
     &:before{
