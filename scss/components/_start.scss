@@ -22,16 +22,25 @@
         height: 100%;
         transition: 0.5s;
         opacity: 0;
+        @media (max-width: 1199px){
+            display: none;
+            background-image: none;
+        }
     }
     &__logo{
         margin-bottom: 60px;
         transition: 0.5s;
         opacity: 0;
+        
         @media (max-width: 1599px){
             margin-bottom: 40px;
         }
         @media (max-width: 1365px){
             margin-bottom: 120px;
+        }
+        @media (max-width: 1199px){
+            max-width: 680px;
+            margin: 0 auto 40px auto;
         }
         img{
             margin: 0 auto;
@@ -43,8 +52,17 @@
         overflow: hidden;
         margin: 0 auto;
         display: none;
+        
         &.delay{
             display: block;
+            @media (max-width: 1199px){
+                display: none;
+            }
+        }
+        &.xs-show-scroller{
+            @media (max-width: 1199px){
+                display: block;
+            }
         }
         &--scroller-projects{
             position: fixed;

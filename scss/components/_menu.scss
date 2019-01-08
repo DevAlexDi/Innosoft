@@ -12,9 +12,15 @@
     opacity: 0;
     transition: opacity 0.2s;
     clip: auto;
+    @media (max-width: 1199px){
+        display: none;
+    }
     &.visible{
         opacity: 1;
         display: block;
+        @media (max-width: 1199px){
+            display: none;
+        }
         .menu__list{
             ul{
                 li{

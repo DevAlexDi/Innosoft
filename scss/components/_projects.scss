@@ -60,6 +60,9 @@
         @media (max-width: 1365px){
             top: 289px;
         }
+        @media (max-width: 1199px){
+            display: none;
+        }
         &.hover-project{
             .projects-wr__title__count-sildes{
                 opacity: 0;
@@ -206,7 +209,11 @@
         }
     } 
 }
-
+.projects {
+    @media (max-width: 1199px){
+        display: none!important;
+    }
+}
 .project__slide{
     position: absolute;
     top: 0;
@@ -216,6 +223,7 @@
     width: 100%;
     padding-top: 230px;
     transition: padding 0.3s;
+    
     @media (max-width: 1919px){
         padding-top: 210px;
     }
@@ -225,6 +233,7 @@
     @media (max-width: 1365px){
         padding-top: 270px;
     }
+    
     &.opened{
         padding-top: 0;
         animation-duration: 0s;
@@ -268,6 +277,15 @@
                 &__top{
                     &__width{
                         transform: none;
+                        @media (max-width: 1599px){
+                            padding-top: 300px;
+                        }
+                        @media (max-width: 1365px){
+                            padding-top: 335px;
+                        }
+                        &--list{
+                            padding-top: 0!important;
+                        }
                     }
                 }
                 .start__scroller{
@@ -540,4 +558,47 @@
 }
 .rel-wr{
     position: relative;
+}
+.sm-projects{
+    display: none;
+    margin: 0 auto;
+    margin-bottom: 70px;
+    @media (max-width: 1199px){
+        display: block;
+    }
+    &__title{
+        line-height: 20px;
+        font-size: 14px;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: #fff;
+        margin-bottom: 42px;
+        padding: 0 64px;
+    }
+    &__wrapp{
+        position: relative;
+        
+        .for-float{
+            width: 100%;
+            display: flex;
+            padding: 0 12px;
+        }
+        &__item{
+            width: 432px;
+            margin-right: 32px;
+            &__img{
+                height: 340px;
+                background-size: cover;
+                background-position: center;
+                padding-top: 60px;
+                padding-left: 16px;
+            }
+            &__name{
+                line-height: 24px;
+                font-size: 25px;
+                font-weight: $b;
+                color: #FFFFFF;
+            }
+        }
+    }
 }

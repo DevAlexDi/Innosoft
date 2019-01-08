@@ -10,9 +10,12 @@ p{
 }
 .app{
     position: relative;
-    // min-height: 100vh;
     height: 100vh;
     overflow: hidden;
+    @media (max-width: 1199px){
+        height: auto;
+        overflow: inherit;
+    }
 }
 .always-hidden{ 
     border: 0; 
@@ -26,6 +29,14 @@ p{
     position: absolute; 
     width: 1px; 
     white-space: nowrap;
+    @media (max-width: 1199px){
+        overflow: auto;
+        height: auto;
+        min-height: auto;
+        margin: auto;
+        width: 100%;
+        white-space: normal;
+    }
     &.visible{
         overflow: auto;
         height: auto;
@@ -33,6 +44,14 @@ p{
         margin: auto;
         width: 100%;
         white-space: normal;
+        @media (max-width: 1199px){
+            overflow: auto;
+            height: auto;
+            min-height: auto;
+            margin: auto;
+            width: 100%;
+            white-space: normal;
+        }
     }
     &.visible-proj{
         overflow: auto;
@@ -41,6 +60,14 @@ p{
         margin: 0;
         width: 100%;
         white-space: normal;
+        @media (max-width: 1199px){
+            overflow: auto;
+            height: auto;
+            min-height: auto;
+            margin: auto;
+            width: 100%;
+            white-space: normal;
+        }
     } 
 }
 .main-container{
@@ -63,6 +90,10 @@ p{
         padding: 160px 64px 32px 64px;
         max-width: 1152px;
     }
+    @media (max-width: 1199px){
+        padding: 96px 64px 32px 64px;
+        max-width: 100%;
+    }
     &--menu{
         min-height: 100vh;
         display: flex;
@@ -80,6 +111,9 @@ p{
         padding: 0 64px;
         display: block;
         width: 100%;
+        @media (max-width: 1199px){
+            padding: 0 16px;
+        }
     }
     &--news{
         padding: 0 64px;
