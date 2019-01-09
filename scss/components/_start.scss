@@ -3,6 +3,12 @@
 .start{
     background-color: #202020;
     position: relative;
+    @media (max-width: 1199px){
+        padding-bottom: 180px;
+    }
+    @media (max-width: 767px){
+        padding-bottom: 130px;
+    }
     &.loaded{
         .start__background{
             opacity: 1;
@@ -42,8 +48,34 @@
             max-width: 680px;
             margin: 0 auto 40px auto;
         }
+        @media (max-width: 767px){
+            display: none;
+        }
         img{
             margin: 0 auto;
+        }
+    }
+    &__logo-xs{
+        display: none;
+        max-width: 680px;
+        margin: 0 auto 38px auto;
+        
+        @media (max-width: 767px){
+            display: block;
+        }
+        .logo-1{
+            margin: 0 auto 21px auto;
+        }
+        .logo-2{
+            margin: 0 auto 10px auto;
+            transform: translateX(13px);
+        }
+        p{
+            font-size: 14px;
+            text-align: center;
+            letter-spacing: 0.03em;
+
+            color: #FFFFFF;
         }
     }
     &__scroller{

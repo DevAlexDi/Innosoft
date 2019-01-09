@@ -7,21 +7,30 @@
     <title>Innosoft</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/slick.css"/>
     <link rel="stylesheet" type="text/css" href="css/style.min.css"/>
 </head>
 <body>
     <div class="app">
+        <!--стартовый екран-->
         <div class="start always-hidden visible" id="start">
             <div class="start__background"></div>
             <div class="main-container">
                 <div class="start__logo">
                     <img src="img/logo.svg" class="img-responsive">
                 </div>
+                <div class="start__logo-xs">
+                    <img src="img/logo-xs-1.svg" class="img-responsive logo-1">
+                    <img src="img/logo-xs-2.svg" class="img-responsive logo-2">
+                    <p>A software development company</p>
+                </div>
                 <div class="start__scroller xs-show-scroller">
                     <div class="start__scroller__line"></div>
                 </div>
             </div>
         </div>
+        <!--/стартовый екран-->
+        <!--меню-->
         <div class="menu always-hidden" id="menu">
             <div class="main-container main-container--menu">
                 <div class="menu__list">
@@ -46,12 +55,15 @@
                 </div>
             </div>
         </div>
+        <!--/меню-->
         <!--гамбургер меню-->
         <button class="open-close-menu"></button>
         <!--/гамбургер меню-->
+        <!--проекты-->
         <div class="projects-wr page always-hidden" id="projects-wr">
             <div class="projects-wr__title">
                 <div class="main-container main-container--title-projects">
+                    <!--название, описание, текст первого слайда-->
                     <p class="projects-wr__title__count-sildes">
                         <span class="projects-wr__title__count-sildes__selected">01</span>
                         <span class="projects-wr__title__count-sildes__count"></span>
@@ -62,7 +74,9 @@
                     <div class="small-descr-project">
                         <p class="small-descr-project__text">The only online solution for traditional business</p>
                     </div>
+                     <!--/название, описание, текст первого слайда-->
                 </div>
+                <!--кнопка-->
                 <p class="view-project">
                     <span class="view-project__butt">more info</span>
                 </p>
@@ -72,7 +86,9 @@
                     <div class="project__slide__closed-wrapp" style="background-image: url(img/yourso-bg.jpg)">
                         <div class="close-project-wrapp">
                             <div class="close-project-wrapp__width">
+                                <!--кнопка закрытия-->
                                 <button class="close-project"></button>
+                                <!--/кнопка закрытия-->
                             </div>
                         </div>
                         <div class="gradient-bg gradient-bg--1"></div>
@@ -242,36 +258,38 @@
                         </div>
                     </div>
                 </div>
-    
             </div>
+            <!--проекты планшет / телефон-->
             <div class="sm-projects">
                 <h3 class="sm-projects__title">projects</h3>
                 <div class="sm-projects__wrapp">
                     <div class="for-float">
                         <div class="sm-projects__wrapp__item">
-                            <div class="sm-projects__wrapp__item__img" style="background-image: url(img/yourso-bg.jpg)">
+                            <div class="sm-projects__wrapp__item__img modal-open-1" style="background-image: url(img/yourso-bg.jpg)">
                                 <p class="sm-projects__wrapp__item__name">Yorso</p>
                             </div>
                         </div>
                         <div class="sm-projects__wrapp__item">
-                            <div class="sm-projects__wrapp__item__img" style="background-image: url(img/inv-bg.jpg)">
+                            <div class="sm-projects__wrapp__item__img modal-open-2" style="background-image: url(img/inv-bg.jpg)">
                                 <p class="sm-projects__wrapp__item__name">Investore</p>
                             </div>
                         </div>
                         <div class="sm-projects__wrapp__item">
-                            <div class="sm-projects__wrapp__item__img" style="background-image: url(img/its.jpg)">
+                            <div class="sm-projects__wrapp__item__img modal-open-3" style="background-image: url(img/its.jpg)">
                                 <p class="sm-projects__wrapp__item__name">ITS</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-         
+            <!--/ проекты планшет / телефон-->
             <div class="start__scroller start__scroller--scroller-projects">
                 <div class="start__scroller__line"></div>
             </div>
             
         </div>
+        <!--/проекты-->
+        <!--about-->
         <div class="about page always-hidden" id="about">
             <div class="dots-about">
                 <ul class="dots-about__list">
@@ -342,6 +360,7 @@
                 <div class="about-sl__slide about-sl-2 ">
                     <div class="about-sl-2__wrapp">
                         <div class="main-container main-container--about">
+                            <h3 class="xs-title-about">team</h3>
                             <div class="about-sl-2__wrapp__list">
                                 <div class="about-sl-2__wrapp__list__item">
                                     <p class="about-sl-2__wrapp__list__item__title">
@@ -375,7 +394,7 @@
                 </div>
                 <div class="about-sl__slide about-sl-3">
                     <div class="about-sl-3__wrapp">
-                        <div class="main-container main-container--about">
+                        <div class="main-container main-container--about main-container--about__none-padd-xs">
                             <h3 class="about-sl-3__wrapp__title">
                                 <span>management</span>
                             </h3>
@@ -393,8 +412,10 @@
                                         </p>
                                     </div>
                                     <div class="management__item__bott">
-                                        <div class="management__item__bott__photo" style="background-image: url(img/photo-1.jpg)"></div>
+                                        <div class="management__item__bott__photo photo-1"></div>
                                         <div class="management__item__bott__descr">
+                                            <p class="sm-name">Anton Trantin</p>
+                                            <p class="sm-office">CEO</p>
                                             <p class="m-d-title">10 years in IT</p>
                                             <p class="m-d-text">Beeline, Rusatom, Domodedovo,
                                                     Winter Olympic Games 2014 in Sochi</p>
@@ -414,8 +435,10 @@
                                         </p>
                                     </div>
                                     <div class="management__item__bott">
-                                        <div class="management__item__bott__photo" style="background-image: url(img/photo-2.jpg)"></div>
+                                        <div class="management__item__bott__photo photo-2"></div>
                                         <div class="management__item__bott__descr">
+                                            <p class="sm-name">Dmitriy Maksimenko</p>
+                                            <p class="sm-office">Sales director</p>
                                             <p class="m-d-title">12 years in b2b wholesales trading</p>
                                             <p class="m-d-text">Russian Sea group, Meridian, Rosfood; 
                                                     MBA Strategic management 2009</p>
@@ -435,8 +458,10 @@
                                         </p>
                                     </div>
                                     <div class="management__item__bott">
-                                        <div class="management__item__bott__photo" style="background-image: url(img/photo-3.jpg)"></div>
+                                        <div class="management__item__bott__photo photo-3"></div>
                                         <div class="management__item__bott__descr">
+                                            <p class="sm-name">Vyacheslav Lukin</p>
+                                            <p class="sm-office">Executive director</p>
                                             <p class="m-d-title">12 years in IT&T</p>
                                             <p class="m-d-text">Megafon, Huawei, NVision;
                                                     Master’s degree MSIT-SE CMU IU, 2016</p>
@@ -449,12 +474,14 @@
                         </div>
                     </div>
                 </div>
+                <!--появляющийся текст-->
                 <div class="fixed-we-are">
                     <p>we<br><span>are <span class="hiring-span">hiring</span></span></p>
                 </div>
+                <!--появляющийся текст-->
                 <div class="about-sl__slide about-sl-4 ">
                     <div class="about-sl-4__wrapp">
-                        <div class="about-sl-4__wrapp__photo" style="background-image: url(img/team.jpg)"></div>
+                        <div class="about-sl-4__wrapp__photo"></div>
                     </div>
                 </div>
                 <div class="about-sl__slide about-sl-5">
@@ -491,6 +518,10 @@
                         <div class="about-sl-6__wrapp__top"></div>
                         <div class="about-sl-6__wrapp__bott">
                             <div class="main-container main-container--about">
+                                <p class="sm-title-slide-6">
+                                    We are<br>
+                                    hiring
+                                </p>
                                 <div class="flex-hiring">
                                     <div class="flex-hiring__left">
                                         <h6 class="flex-hiring__left__title">Avalable<br>vacancies</h6>
@@ -533,6 +564,8 @@
                 </div>
             </div>
         </div>
+        <!--/about-->
+        <!--новости-->
         <div class="news page always-hidden" id="news">
             <div class="main-container main-container--news">
                 <div class="news-wrapp">
@@ -551,18 +584,48 @@
                                 <a data-toggle="tab" href="#news-tab-3">Blog</a>
                             </li>
                         </ul>
+                        <!--новости отображаемые на планшетах / мобилке-->
+                        <div class="sm-news">
+                            <div class="sm-news__item">
+                                <p class="sm-news__item__date">
+                                    <span>Nov 6</span>
+                                    <span>Deutsche Welle</span>
+                                </p>
+                                <a class="sm-news__item__name" href="#">In Tatarstan, they began to introduce the blockchain technology in the archives</a>
+                                <a class="sm-news__item__button" href="#">Read in source</a>
+                            </div>
+                            <div class="sm-news__item">
+                                <p class="sm-news__item__date">
+                                    <span>Nov 6</span>
+                                    <span>Deutsche Welle</span>
+                                </p>
+                                <a class="sm-news__item__name" href="#">In Tatarstan, they began to introduce the blockchain technology in the archives</a>
+                                <a class="sm-news__item__button" href="#">Read in source</a>
+                            </div>
+                            <div class="sm-news__item">
+                                <p class="sm-news__item__date">
+                                    <span>Nov 6</span>
+                                    <span>Deutsche Welle</span>
+                                </p>
+                                <a class="sm-news__item__name" href="#">In Tatarstan, they began to introduce the blockchain technology in the archives</a>
+                                <a class="sm-news__item__button" href="#">Read in source</a>
+                            </div>
+                        </div>
+                        <!--/новости отображаемые на планшетах / мобилке-->
                     </div>
                     <div class="news-wrapp__right">
+                        <!--категории новостей-->
                         <div class="tab-content">
                             <div id="news-tab-1" class="tab-pane fade in active">
                                 <div class="new-content">
                                     <div class="new-content__counter">
+                                        <!--счетчик-->
                                         <div class="new-content__counter__item">
                                             <span class="news-animation visible-scroll-bott">01</span>
                                             <span class="news-animation">02</span>
                                             <span class="news-animation">03</span>
                                         </div>
-                                        
+                                        <!--/счетчик-->
                                         
                                         <span> — 03</span>
                                     </div>
@@ -679,14 +742,16 @@
 
                             </div>
                         </div>
+                        <!--/категории новостей-->
                     </div>
-
                 </div>
             </div>
             <div class="cube-bg">
                 <div class="cube-bg__animation"></div>
             </div>
         </div>
+        <!--/новости-->
+        <!--контакты-->
         <div class="contacts page always-hidden " id="contacts">
             <div class="contacts__wrapp form-mode">
                 <div class="contacts__wrapp__top">
@@ -707,6 +772,7 @@
                         <div class="rel-contacts-wrapp">
                             <div class="flex-contacts">
                                 <div class="flex-contacts__left">
+                                    <p class="sm-contacts-title">contacts</p>
                                     <ul class="flex-contacts__left__list">
                                         <li>info@innosoft.pro</li>
                                         <li>+7 (963) 686-63-86</li>
@@ -770,16 +836,94 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
-
+        </div>
+        <!--/контакты-->
+        <!--футер на планшетах / мобиках-->
+        <div class="footer-xs">
+            <p>© 2018 - 2099 All Rights Reserved</p>
+        </div>
+        <!--/ футер на планшетах / мобиках-->
+    </div>
+    <!--модалка yorso-->
+    <div class="modal fade modal-yourso" id="modal-yourso" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <button type="button" class="close-modal" data-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-slider">
+                <div class="modal-slide">
+                    <p class="modal-slide__name">Yorso</p>
+                    <p class="modal-slide__title">The only online solution for traditional business</p>
+                    <p class="modal-slide__text">Yorso is an online b2b platform for fish and seafood wholesale market. The service automates key business processes while decreasing transactional costs for 10-30%. At present the project team works on the implementation of Logistics Supply Chain concept and scaling to the new markets.</p>
+                </div>
+                <div class="modal-slide">
+                    <p class="modal-slide__name">Yorso</p>
+                    <ul class="modal-slide__list">
+                        <li>Automate sales, purchase and logistics</li>
+                        <li>Scale to new markets</li>
+                        <li>Transparent and convenient EDX</li>
+                    </ul>
+                    <div class="modal-slide__flex">
+                        <a href="#" class="modal-slide__button">Visit website</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-
-    
+    <!--/модалка yorso-->
+    <!--модалка Investore-->
+    <div class="modal fade modal-inv" id="modal-inv" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <button type="button" class="close-modal" data-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-slider">
+                <div class="modal-slide">
+                    <p class="modal-slide__name">Investore</p>
+                    <p class="modal-slide__title">Accessible and state-of-art online investments <br>to commercial property</p>
+                    <p class="modal-slide__text">Online investment tool to commercial property with the minimum input of 10000₽. The project is growing rapidly due to the accessibility to a wide range of investors. It plans to enter international investment markets.</p>
+                </div>
+                <div class="modal-slide">
+                    <p class="modal-slide__name">Investore</p>
+                    <ul class="modal-slide__list">
+                        <li>Helps make investments into commercial property</li>
+                        <li>Provides a passive income with minimum investment</li>
+                        <li>Ensures deals transparency and validity</li>
+                    </ul>
+                    <div class="modal-slide__flex">
+                        <a href="#" class="modal-slide__button">Visit website</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ модалка Investore-->
+    <!--модалка ITS-->
+    <div class="modal fade modal-its" id="modal-its" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <button type="button" class="close-modal" data-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-slider">
+                <div class="modal-slide">
+                    <p class="modal-slide__name">ITS</p>
+                    <p class="modal-slide__title">Newest data technologies <br>to monitor transport infrastructure</p>
+                    <p class="modal-slide__text">The project implements Smart City concept. In 2018 the project team brought two solutions for transport infrastructure optimization to the market.</p>
+                </div>
+                <div class="modal-slide">
+                    <p class="modal-slide__name">ITS</p>
+                    <ul class="modal-slide__list">
+                        <li>Collect actual transport infrastructure data</li>
+                        <li>Analyze road traffic</li>
+                        <li>Bring transparency into road maintenance</li>
+                    </ul>
+                    <div class="modal-slide__flex">
+                        <a href="#" class="modal-slide__button">Visit website</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ модалка ITS-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
     
 </body>

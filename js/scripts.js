@@ -27,7 +27,10 @@ $(document).ready(function(){
         var activeSlide = 0;
         var canAnimate = true;
         var isOpened = $('.projects-wr__title').hasClass('opened');
+
+        //названия проектов
         var projectsName = ['yorso','investore','ITS'];
+        //текста с проектов
         var projectsSmallDescr = [
             'The only online solution for traditional business',
             'Accessible and state-of-art online investments to commercial property',
@@ -129,13 +132,14 @@ $(document).ready(function(){
                 hoveredProject = false;
             }
         });
-    //project open
 
-    $('.view-project__butt').click(function(){
-        $('.project__slide--'+(activeSlide + 1)).addClass('opened');
-        $('.projects-wr__title').addClass('opened');
-        $('.projects-wr').addClass('project-opened');
-    });
+        //project open
+
+        $('.view-project__butt').click(function(){
+            $('.project__slide--'+(activeSlide + 1)).addClass('opened');
+            $('.projects-wr__title').addClass('opened');
+            $('.projects-wr').addClass('project-opened');
+        });
         
         //project close
 
@@ -345,7 +349,7 @@ $(document).ready(function(){
 
 
 
-        //news
+        //==============news==============
 
         var activeSlideNews = 0;
 
@@ -402,7 +406,7 @@ $(document).ready(function(){
         });
 
 
-        // contacts
+        //================contacts=====================
 
         $('.change-to-adress').click(function(){
             $('.contacts__wrapp').removeClass('form-mode');
@@ -414,6 +418,43 @@ $(document).ready(function(){
             $('.contacts__wrapp').addClass('form-mode');
         });
     }
+
+
+    //sm modals projects
+
+    $('.modal-open-1').click(function(){
+        $('#modal-yourso').modal('show');
+    });
+    $('.modal-open-2').click(function(){
+        $('#modal-inv').modal('show');
+    });
+    $('.modal-open-3').click(function(){
+        $('#modal-its').modal('show');
+    });
+
+    // sliders init / disabled
+
+    var flagInitSlider = false;
+    $('.modal').on('shown.bs.modal', function (e) {
+        $('.modal-slider').slick({
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows:false,
+            dots:true,
+            fade: true
+        });
+        $('.modal-slider').addClass('visible-slider');
+        flagInitSlider = true;
+    });
+    $('.modal').on('hidden.bs.modal', function () {
+        if(flagInitSlider){
+            $('.modal-slider').slick('unslick');
+            $('.modal-slider').removeClass('visible-slider');
+            flagInitSlider = false;
+        }
+    });
+
 });
 
 

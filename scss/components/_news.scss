@@ -5,6 +5,9 @@
     background-color: #202020;
     position: relative;
     overflow: hidden!important;
+    @media (max-width: 1199px){
+        padding-bottom: 30px;
+    }
     &.visible{
         .news-wrapp__left h3 span{
             animation: show-slide-to-top 0.25s 0.25s linear forwards;
@@ -47,6 +50,7 @@
         }
         @media (max-width: 1365px){
             height: 674px;
+            top: 139px;
         }
         &__animation{
             background: #fff;
@@ -61,6 +65,9 @@
 }
 .nav-tabs{
     border: none;
+    @media (max-width: 1199px){
+        display: none;
+    }
     li{
         float: none;
         margin-bottom: 34px;
@@ -89,8 +96,66 @@
         color: rgba(255, 255, 255, 0.3);
     }
 }
+.sm-news{
+    display: none;
+    @media (max-width: 1199px){
+        display: block;
+    }
+    &__item{
+        margin-bottom: 100px;
+        @media (max-width: 767px){
+            margin-bottom: 50px;
+        }
+        &__date{
+            line-height: 34px;
+            font-size: 20px;
+            margin-bottom: 7px;
+            color: rgba(255, 255, 255, 0.65);
+            @media (max-width: 767px){
+                line-height: 16px;
+                font-size: 13px;
+                letter-spacing: 0.01em;
+            }
+            span{
+                padding-right: 24px;
+                @media (max-width: 767px){
+                    padding-right: 12px;
+                }
+            }
+        }
+        &__name{
+            display: block;
+            line-height: 31px;
+            font-size: 25px;
+            font-weight: $b;
+            color: #FFFFFF;
+            margin-bottom: 43px;
+            @media (max-width: 767px){
+                line-height: 24px;
+                font-size: 17px;
+                margin-bottom: 24px;
+            }
+        }
+        &__button{
+            line-height: 34px;
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.65);
+            @media (max-width: 767px){
+                line-height: 23px;
+                font-size: 17px;
+            }
+        }
+    }
+}
 .news-wrapp{
     display: flex;
+    @media (max-width: 1199px){
+        display: block;
+        padding-top: 120px;
+    }
+    @media (max-width: 767px){
+        padding-top: 82px;
+    }
     &__left{
         width: 45%;
         padding-top: 265px;
@@ -103,6 +168,10 @@
         @media (max-width: 1365px){
             padding-top: 265px;
         }
+        @media (max-width: 1199px){
+            padding-top: 0;
+            width: 100%;
+        }
         h3{
             margin: 0;
             position: relative;
@@ -113,9 +182,25 @@
             text-transform: uppercase;
             margin-bottom: 100px;
             overflow: hidden;
+            @media (max-width: 1199px){
+                line-height: 36px;
+                font-size: 25px;
+                letter-spacing: 0.03em;
+                text-transform: uppercase;
+                font-weight: $r;
+                margin-bottom: 80px;
+            }
+            @media (max-width: 767px){
+                line-height: 20px;
+                font-size: 14px;
+                margin-bottom: 53px;
+            }
             span{
                 display: block;
                 transform: translateY(100%);
+                @media (max-width: 1199px){
+                    transform: none;
+                }
             }
         }
     }
@@ -125,6 +210,7 @@
         position: relative;
         z-index: 30;
         max-width: 615px;
+        
         @media (max-width: 1919px){
             padding-top: 247px;
         }
@@ -133,6 +219,9 @@
         }
         @media (max-width: 1365px){
             padding-top: 275px;
+        }
+        @media (max-width: 1199px){
+            display: none;
         }
     }
 }
