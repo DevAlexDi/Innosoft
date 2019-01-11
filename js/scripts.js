@@ -2,10 +2,19 @@ $(document).ready(function(){
    
     var widthScreen = $(window).width();
 
-    if(widthScreen >=1200){
+    if(widthScreen >= 1200){
 
         var elStart = document.getElementById("start");
         var elProjects = document.getElementById("projects");
+        
+        // переменные для touch event
+        var startPoint ;
+        var endPoint ;
+        var touchDelta = 0;
+
+        window.addEventListener('touchstart', function(event) {
+          startPoint = event.changedTouches[0].pageY;
+        }, false);
 
 
         //start to menu
@@ -17,10 +26,21 @@ $(document).ready(function(){
                         $('.menu').addClass('visible');
                     });
                 });
-                
             }
         }, true);
 
+        //start to menu touch
+        elStart.addEventListener('touchend', function(event) {
+            endPoint = event.changedTouches[0].pageY;
+            if((endPoint - startPoint) < -50) {
+                $('.start').fadeOut(200,function(){
+                    $('.start').removeClass('visible');
+                    $('.menu').fadeIn(100,function(){
+                        $('.menu').addClass('visible');
+                    });
+                });
+            }
+        }, false);
 
         //==========projects===================
 
@@ -93,7 +113,7 @@ $(document).ready(function(){
         }
 
 
-
+        
         elProjects.addEventListener("wheel", function (event) {
             isOpened = $('.projects-wr__title').hasClass('opened');
             if(canAnimate && !hoveredProject && !isOpened){
@@ -115,22 +135,54 @@ $(document).ready(function(){
                 }
             }
         }, true);
-
+        
+        //touch
+        elProjects.addEventListener('touchend', function(event) {
+            if(!$('.projects-wr__title').hasClass('opened')){
+                endPoint=event.changedTouches[0].pageY;
+                isOpened = $('.projects-wr__title').hasClass('opened');
+                if(canAnimate && !hoveredProject && !isOpened){
+                    if((endPoint - startPoint) > 50) {
+                        canAnimate = false;
+                        activeSlide -= 1;
+                        if(activeSlide < 0){
+                            activeSlide = ($('.project__slide').length - 1);
+                        }
+                        ProjectsClassesScrollTop(activeSlide)
+                    }
+                    else if ((endPoint - startPoint) < -50) {
+                        canAnimate = false;
+                        activeSlide += 1;
+                        if(activeSlide >= $('.project__slide').length){
+                            activeSlide = 0;
+                        }
+                        ProjectsClassesScrollBott(activeSlide);
+                    }
+                }
+            }
+            else{
+                endPoint=event.changedTouches[0].pageY;
+                if((endPoint - startPoint) > 50) {
+                    $('.project__slide.opened').removeClass('scrolled-proj');
+                    $('.projects-wr__title.opened').removeClass('scrolled-proj');
+                }
+                else if ((endPoint - startPoint) < -50) {
+                    $('.project__slide.opened').addClass('scrolled-proj');
+                    $('.projects-wr__title.opened').addClass('scrolled-proj');
+                }
+            }
+        }, true);
+        
         //project hover
-        $('.project__slide__closed-wrapp, .projects-wr__title').mouseover(function() {
-            if(canAnimate){
-                $('.projects-wr__title').addClass('hover-project');
-                $('.project__slide__closed-wrapp').addClass('hover-project');
-                hoveredProject = true;
-            }
-            
+        $(' .projects-wr__title').mouseover(function() {
+            $('.projects-wr__title').addClass('hover-project');
+            $('.project__slide.visible-scroll-bott .project__slide__closed-wrapp, .project__slide.visible-scroll-top .project__slide__closed-wrapp').addClass('hover-project');
+            hoveredProject = true;
         });
-        $('.project__slide__closed-wrapp').mouseout(function() {
-            if(canAnimate){
-                $('.projects-wr__title').removeClass('hover-project');
-                $('.project__slide__closed-wrapp').removeClass('hover-project');
-                hoveredProject = false;
-            }
+        $('.projects-wr__title').mouseout(function() {
+            $('.projects-wr__title').removeClass('hover-project');
+            $('.project__slide.visible-scroll-bott .project__slide__closed-wrapp, .project__slide.visible-scroll-top .project__slide__closed-wrapp').removeClass('hover-project');
+            hoveredProject = false;
         });
 
         //project open
@@ -164,10 +216,9 @@ $(document).ready(function(){
                     $('.project__slide.opened').removeClass('scrolled-proj');
                     $('.projects-wr__title.opened').removeClass('scrolled-proj');
                 }
-                console.log(event.originalEvent);
             }
         });
-
+       
         //go to next project
 
         $('.hover-zone-project').click(function(){
@@ -194,7 +245,6 @@ $(document).ready(function(){
                     $('.menu').removeClass('visible');
                 });
             }
-            
         });
 
         function closeProjectOnChangePage(){
@@ -224,9 +274,6 @@ $(document).ready(function(){
                 return;
             }
         });
-
-
-
 
         //=========== about ==============
 
@@ -347,6 +394,28 @@ $(document).ready(function(){
             }
         }, true);
 
+        //touch
+        elAbout.addEventListener("touchend", function (event) {
+            if(canAnimateAbout){
+                if((endPoint - startPoint) > 50) {
+                    canAnimateAbout = false;
+                    activeSlideAbout -= 1;
+                    if(activeSlideAbout < 0){
+                        activeSlideAbout = ($('.about-sl__slide').length - 1);
+                    }
+                    AboutClassesScrollTop(activeSlideAbout);
+                }
+                else if ((endPoint - startPoint) < -50) {
+                    canAnimateAbout = false;
+                    activeSlideAbout += 1;
+                    if(activeSlideAbout >= $('.about-sl__slide').length){
+                        activeSlideAbout = 0;
+                    }
+                    AboutClassesScrollBott(activeSlideAbout);
+                }
+            }
+        }, true);
+
 
 
         //==============news==============
@@ -375,7 +444,6 @@ $(document).ready(function(){
             },500);
         }
 
-
         $('.news-wrapp__right, .cube-bg').on('mousewheel', function (event) {
             if(canAnimate){
                 if(event.originalEvent.deltaY > 0){
@@ -393,6 +461,30 @@ $(document).ready(function(){
                         activeSlideNews = ($('.tab-pane.active .new-content__counter__item .news-animation').length - 1);
                     }
                     newsScrollTop(activeSlideNews)
+                }
+            }
+        });
+
+        //touch
+        $('.news-wrapp__right, .cube-bg').on('touchend', function (event) {
+            if(canAnimate){
+                console.log(event);
+                endPoint=event.originalEvent.changedTouches[0].pageY;
+                if((endPoint - startPoint) > 50) {
+                    canAnimate = false;
+                    activeSlideNews -= 1;
+                    if(activeSlideNews < 0){
+                        activeSlideNews = ($('.tab-pane.active .new-content__counter__item .news-animation').length - 1);
+                    }
+                    newsScrollTop(activeSlideNews);
+                }
+                else if ((endPoint - startPoint) < -50) {
+                    canAnimate = false;
+                    activeSlideNews += 1;
+                    if(activeSlideNews >= $('.tab-pane.active .new-content__counter__item .news-animation').length){
+                        activeSlideNews = 0;
+                    }
+                    newsScrollBott(activeSlideNews);
                 }
             }
         });
