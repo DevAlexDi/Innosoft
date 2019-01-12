@@ -1,0 +1,386 @@
+@import "layout/var";
+
+.about{
+    background-color: #202020;
+    position: relative;
+    overflow: hidden!important;
+    transition: background-color 0.2s;
+    &.white-bg{
+        background-color: #fff;
+    }
+    &.visible{
+        .fixed-we-are{
+            position: fixed;
+            top: 227px;
+            left: 50%;
+            transform: translateX(-705px);
+            z-index: 50;
+            display: none;
+            @media (max-width: 1919px){
+                transform: translateX(-616px);
+                top: 175px;
+            }
+            @media (max-width: 1599px){
+                transform: translateX(-556px);
+                top: 87px;
+            }
+            @media (max-width: 1300px){
+                transform: translateX(-511px);
+                top: 227px;
+            }
+            &.visible{
+                display: block;
+            }
+            &.color-black{
+                p{
+                    color: #202020;
+                }
+            }
+            &.hiring-visible{
+                p{
+                    span{
+                        display: inline;
+                    }
+                }
+            }
+            p{
+                font-size: 98px;
+                letter-spacing: 0.04em;
+                text-transform: uppercase;
+                font-weight: $b;
+                color: #fff;
+                line-height: 112px;
+                transition: color 0.4s;
+                span{
+                    white-space: nowrap;
+                }
+                .hiring-span{
+                    display: none;
+                }
+            }
+        }
+        .dots-about{
+            display: block;
+            
+        }
+        .about-sl-1{
+            &.visible-scroll-bott{
+                .about-sl-1__wrapp__title .rel-wr span{
+                    animation: show-slide-to-top 0.3s 0.25s linear forwards;
+                }
+                .about-sl-1__wrapp__descr__item:nth-child(1){
+                    h5 .rel-wr span{
+                        animation: show-slide-to-top 0.3s 0.25s linear forwards;
+                    }
+                    p{
+                        animation: animation-opacity-to-1 0.3s 0.25s linear forwards;
+                    }
+                }
+                .about-sl-1__wrapp__descr__item:nth-child(2){
+                    h5 .rel-wr span{
+                        animation: show-slide-to-top 0.3s 0.35s linear forwards;
+                    }
+                    p{
+                        animation: animation-opacity-to-1 0.3s 0.35s linear forwards;
+                    }
+                }
+                .about-sl-1__wrapp__descr__item:nth-child(3){
+                    h5 .rel-wr span{
+                        animation: show-slide-to-top 0.3s 0.45s linear forwards;
+                    }
+                    p{
+                        animation: animation-opacity-to-1 0.3s 0.45s linear forwards;
+                    }
+                }
+            }
+            &.hide-scroll-bott{
+                .about-sl-1__wrapp__title .rel-wr span{
+                    animation: hide-slide-to-top 0.3s 0.25s linear forwards;
+                    transform: translateY(0);
+                }
+                .about-sl-1__wrapp__descr__item:nth-child(1){
+                    h5 .rel-wr span{
+                        animation: hide-slide-to-top 0.3s 0.25s linear forwards;
+                        transform: translateY(0);
+                    }
+                    p{
+                        animation: animation-opacity-to-0 0.3s 0.25s linear forwards;
+                        opacity: 1;
+                    }
+                }
+                .about-sl-1__wrapp__descr__item:nth-child(2){
+                    h5 .rel-wr span{
+                        animation: hide-slide-to-top 0.3s 0.35s linear forwards;
+                        transform: translateY(0);
+                    }
+                    p{
+                        animation: animation-opacity-to-0 0.3s 0.35s linear forwards;
+                        opacity: 1;
+                    }
+                }
+                .about-sl-1__wrapp__descr__item:nth-child(3){
+                    h5 .rel-wr span{
+                        animation: hide-slide-to-top 0.3s 0.45s linear forwards;
+                        transform: translateY(0);
+                    }
+                    p{
+                        animation: animation-opacity-to-0 0.3s 0.45s linear forwards;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        .about-sl-2{
+            &.visible-scroll-bott{
+                .about-sl-2__wrapp__list__item{
+                    &:nth-child(1){
+                        .about-sl-2__wrapp__list__item__title span{
+                            animation: show-slide-to-top 0.3s 0.25s linear forwards;
+                        }
+                        .about-sl-2__wrapp__list__item__text span{
+                            animation: show-slide-to-top 0.3s 0.25s linear forwards;
+                        }
+                    }
+                    &:nth-child(2){
+                        .about-sl-2__wrapp__list__item__title span{
+                            animation: show-slide-to-top 0.3s 0.35s linear forwards;
+                        }
+                        .about-sl-2__wrapp__list__item__text span{
+                            animation: show-slide-to-top 0.3s 0.35s linear forwards;
+                        }
+                    }
+                    &:nth-child(3){
+                        .about-sl-2__wrapp__list__item__title span{
+                            animation: show-slide-to-top 0.3s 0.45s linear forwards;
+                        }
+                        .about-sl-2__wrapp__list__item__text span{
+                            animation: show-slide-to-top 0.3s 0.45s linear forwards;
+                        }
+                    }
+                }
+            }
+            &.hide-scroll-bott{
+                .about-sl-2__wrapp__list__item{
+                    &:nth-child(1){
+                        .about-sl-2__wrapp__list__item__title span{
+                            animation: hide-slide-to-top 0.3s 0.25s linear forwards;
+                            transform: translateY(0);
+                        }
+                        .about-sl-2__wrapp__list__item__text span{
+                            animation: hide-slide-to-top 0.3s 0.25s linear forwards;
+                            transform: translateY(0);
+                        }
+                    }
+                    &:nth-child(2){
+                        .about-sl-2__wrapp__list__item__title span{
+                            animation: hide-slide-to-top 0.3s 0.35s linear forwards;
+                            transform: translateY(0);
+                        }
+                        .about-sl-2__wrapp__list__item__text span{
+                            animation: hide-slide-to-top 0.3s 0.35s linear forwards;
+                            transform: translateY(0);
+                        }
+                    }
+                    &:nth-child(3){
+                        .about-sl-2__wrapp__list__item__title span{
+                            animation: hide-slide-to-top 0.3s 0.45s linear forwards;
+                            transform: translateY(0);
+                        }
+                        .about-sl-2__wrapp__list__item__text span{
+                            animation: hide-slide-to-top 0.3s 0.45s linear forwards;
+                            transform: translateY(0);
+                        }
+                    }
+
+                }
+            }
+        }
+        .about-sl-3{
+            &.visible-scroll-bott{
+                .about-sl-3__wrapp__title span{
+                    animation: show-slide-to-top 0.3s 0.25s linear forwards;
+                }
+                .management__item:nth-child(1){
+                    .management__item__name span{
+                        animation: show-slide-to-top 0.3s 0.25s linear forwards;
+                    }
+                    .management__item__office span{
+                        animation: show-slide-to-top 0.3s 0.25s linear forwards;
+                    }
+                    .management__item__bott{
+                        animation: show-slide-to-top-opacity 0.3s 0.25s linear forwards;
+                    }
+                }
+                .management__item:nth-child(2){
+                    .management__item__name span{
+                        animation: show-slide-to-top 0.3s 0.35s linear forwards;
+                    }
+                    .management__item__office span{
+                        animation: show-slide-to-top 0.3s 0.35s linear forwards;
+                    }
+                    .management__item__bott{
+                        animation: show-slide-to-top-opacity 0.3s 0.35s linear forwards;
+                    }
+                }
+                .management__item:nth-child(3){
+                    .management__item__name span{
+                        animation: show-slide-to-top 0.3s 0.45s linear forwards;
+                    }
+                    .management__item__office span{
+                        animation: show-slide-to-top 0.3s 0.45s linear forwards;
+                    }
+                    .management__item__bott{
+                        animation: show-slide-to-top-opacity 0.3s 0.45s linear forwards;
+                    }
+                }
+               
+            }
+            &.hide-scroll-bott{
+                .about-sl-3__wrapp__title span{
+                    animation: hide-slide-to-top 0.3s 0.25s linear forwards;
+                    transform: translateY(0);
+                }
+                .management__item:nth-child(1){
+                    .management__item__name span{
+                        animation: hide-slide-to-top 0.3s 0.25s linear forwards;
+                        transform: translateY(0);
+                    }
+                    .management__item__office span{
+                        animation: hide-slide-to-top 0.3s 0.25s linear forwards;
+                        transform: translateY(0);
+                    }
+                    .management__item__bott{
+                        animation: hide-slide-to-top-opacity 0.3s 0.25s linear forwards;
+                        transform: translateY(0);
+                        opacity: 1;
+                    }
+                }
+                .management__item:nth-child(2){
+                    .management__item__name span{
+                        animation: hide-slide-to-top 0.3s 0.35s linear forwards;
+                        transform: translateY(0);
+                    }
+                    .management__item__office span{
+                        animation: hide-slide-to-top 0.3s 0.35s linear forwards;
+                        transform: translateY(0);
+                    }
+                    .management__item__bott{
+                        animation: hide-slide-to-top-opacity 0.3s 0.35s linear forwards;
+                        transform: translateY(0);
+                        opacity: 1;
+                    }
+                }
+                .management__item:nth-child(3){
+                    .management__item__name span{
+                        animation: hide-slide-to-top 0.3s 0.45s linear forwards;
+                        transform: translateY(0);
+                    }
+                    .management__item__office span{
+                        animation: hide-slide-to-top 0.3s 0.45s linear forwards;
+                        transform: translateY(0);
+                    }
+                    .management__item__bott{
+                        animation: hide-slide-to-top-opacity 0.3s 0.45s linear forwards;
+                        transform: translateY(0);
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        .about-sl-4{
+            &.visible-scroll-bott{
+                .about-sl-4__wrapp{
+                    animation: show-slide-to-top 0.2s 0.25s linear forwards;
+                }
+            }
+            &.hide-scroll-bott{
+                .about-sl-4__wrapp{
+                    animation: hide-slide-to-top 0.2s 0.25s linear forwards;
+                    transform: translateY(0);
+                }
+            }
+        }
+        .about-sl-5{
+            &.visible-scroll-bott{
+                .about-sl-5__wrapp__line:nth-child(1){
+                    h6 span{
+                        animation: show-slide-to-top 0.3s 0.25s linear forwards;
+                    }
+                    p span{
+                        animation: show-slide-to-top 0.3s 0.25s linear forwards;
+                    }
+                }
+                .about-sl-5__wrapp__line:nth-child(2){
+                    h6 span{
+                        animation: show-slide-to-top 0.3s 0.35s linear forwards;
+                    }
+                    p span{
+                        animation: show-slide-to-top 0.3s 0.35s linear forwards;
+                    }
+                }
+                .about-sl-5__wrapp__line:nth-child(3){
+                    h6 span{
+                        animation: show-slide-to-top 0.3s 0.45s linear forwards;
+                    }
+                    p span{
+                        animation: show-slide-to-top 0.3s 0.45s linear forwards;
+                    }
+                }
+            }
+            &.hide-scroll-bott{
+                .about-sl-5__wrapp__line:nth-child(1){
+                    h6 span{
+                        animation: hide-slide-to-top 0.3s 0.25s linear forwards;
+                        transform: translateY(0);
+                    }
+                    p span{
+                        animation: hide-slide-to-top 0.3s 0.25s linear forwards;
+                        transform: translateY(0);
+                    }
+                }
+                .about-sl-5__wrapp__line:nth-child(2){
+                    h6 span{
+                        animation: hide-slide-to-top 0.3s 0.35s linear forwards;
+                        transform: translateY(0);
+                    }
+                    p span{
+                        animation: hide-slide-to-top 0.3s 0.35s linear forwards;
+                        transform: translateY(0);
+                    }
+                }
+                .about-sl-5__wrapp__line:nth-child(3){
+                    h6 span{
+                        animation: hide-slide-to-top 0.3s 0.45s linear forwards;
+                        transform: translateY(0);
+                    }
+                    p span{
+                        animation: hide-slide-to-top 0.3s 0.45s linear forwards;
+                        transform: translateY(0);
+                    }
+                }
+            }
+        }
+        .about-sl-6{
+            &.visible-scroll-bott{
+                .about-sl-6__wrapp{
+                    animation: show-slide-to-top 0.2s 0.05s linear forwards;
+                }
+                .about-sl-6__wrapp__bott{
+                    animation: animation-opacity-to-1 0.2s 0.05s linear forwards;
+                }
+            }
+            &.hide-scroll-bott{
+                .about-sl-6__wrapp{
+                    animation: hide-slide-to-top 0.3s 0.25s linear forwards;
+                    transform: translateY(0);
+                }
+                .about-sl-6__wrapp__bott{
+                    .about-sl-6__wrapp__bott{
+                        animation: animation-opacity-to-0 0.3s 0.25s linear forwards;
+                        opacity: 1;
+                    }
+                }
+            }
+        }     
+    }
+}

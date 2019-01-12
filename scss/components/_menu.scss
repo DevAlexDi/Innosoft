@@ -12,9 +12,15 @@
     opacity: 0;
     transition: opacity 0.2s;
     clip: auto;
+    @media (max-width: 1199px){
+        display: none;
+    }
     &.visible{
         opacity: 1;
         display: block;
+        @media (max-width: 1199px){
+            display: none;
+        }
         .menu__list{
             ul{
                 li{
@@ -36,12 +42,12 @@
             margin: 0;
             padding: 167px 0;
             @media (max-width: 1919px){
-                padding: 139px 0;
+                padding: 100px 0;
             }
             @media (max-width: 1599px){
-                padding: 113px 0;
+                padding: 70px 0;
             }
-            @media (max-width: 1365px){
+            @media (max-width: 1300px){
                 padding: 137px 0;
             }
             li{
