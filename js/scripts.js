@@ -208,7 +208,6 @@ $(document).ready(function(){
         $('.project__slide, .projects-wr__title').on('mousewheel', function (event) {
             if($(this).hasClass('opened')){
                 if(event.originalEvent.deltaY > 0){
-                    
                     $('.project__slide.opened').addClass('scrolled-proj');
                     $('.projects-wr__title.opened').addClass('scrolled-proj');
                 }
