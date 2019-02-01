@@ -371,7 +371,7 @@
             }
             &.hide-scroll-bott{
                 .about-sl-6__wrapp{
-                    animation: hide-slide-to-top 0.3s 0.25s linear forwards;
+                    animation: animation-opacity-to-0 0.3s 0.25s linear forwards;
                     transform: translateY(0);
                 }
                 .about-sl-6__wrapp__bott{
@@ -383,4 +383,5 @@
             }
         }     
     }
+    
 }

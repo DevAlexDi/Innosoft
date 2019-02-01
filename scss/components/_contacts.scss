@@ -57,10 +57,64 @@
                     opacity: 1;
                 }
             }
+        } 
+    }
+    &.hide-section{
+        .contacts__wrapp__bott{
+            animation: hide-slide-to-bott 0.3s 0.25s ease-out forwards;
+            transform: translate(0);
+        }
+        .contacts__wrapp{
+            &.form-mode{
+                .contacts__wrapp__top__title span{
+                    transform: translateY(100%);
+                    transition-delay: 0.25s;
+                }
+                .flex-contacts{
+                    transform: translateY(0);
+                    opacity: 0;
+                    z-index: 40;
+                    transition-delay: 0.25s;
+                }
+                .addresses{
+                    transform: translateY(50px);
+                    opacity: 0;
+                    transition-delay: 0s;
+                }
+                .contacts__wrapp__top__map{
+                    opacity: 0;
+                    transition-delay: 0s;
+                }
+                .contacts__wrapp__top__map__circle{
+                    opacity: 0;
+                }
+            }
+            &.map-mode{
+                .flex-contacts{
+                    transform: translateY(50px);
+                    opacity: 0;
+                    transition-delay: 0s;
+                }
+                .contacts__wrapp__top__title span{
+                    transition-delay: 0s;
+                }
+                .addresses{
+                    transform: translateY(0);
+                    opacity: 0;
+                    transition-delay: 0.25s;
+                    z-index: 40;
+                }
+                .contacts__wrapp__top__map{
+                    opacity: 0;
+                    transition-delay: 0.25s;
+                }
+                .contacts__wrapp__top__map__circle{
+                    opacity: 0;
+                }
+            }
         }
         
     }
-    
     &__wrapp{
         position: relative;
         

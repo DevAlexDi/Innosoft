@@ -1,177 +1,235 @@
 @keyframes line-move {
-    0%{
+    0% {
         transform: translateY(-100%);
     }
+
     100% {
         transform: translateY(100%);
     }
-  }
+}
 
-  @keyframes show-slide-to-top {
-    0%{
+@keyframes show-slide-to-top {
+    0% {
         transform: translateY(100%);
     }
+
     100% {
         transform: translateY(0);
 
     }
-  }
-  @keyframes hide-slide-to-top {
-    0%{
+}
+
+@keyframes hide-slide-to-top {
+    0% {
         transform: translateY(0);
     }
+
     100% {
         transform: translateY(-100%);
 
     }
-  }
+}
 
 
-  @keyframes show-slide-to-bott {
-    0%{
+@keyframes show-slide-to-bott {
+    0% {
         transform: translateY(-100%);
     }
+
     100% {
         transform: translateY(0);
 
     }
-  }
-  @keyframes hide-slide-to-bott {
-    0%{
+}
+
+@keyframes hide-slide-to-bott {
+    0% {
         transform: translateY(0);
     }
+
     100% {
         transform: translateY(100%);
 
     }
-  }
+}
 
-  @keyframes animation-height {
-    0%{
+@keyframes animation-height {
+    0% {
         height: 0px;
     }
+
     100% {
         height: 624px;
-        
+
     }
-  }
-  @keyframes animation-height-1500 {
-    0%{
+}
+
+@keyframes animation-height-1500 {
+    0% {
         height: 0px;
     }
+
     100% {
         height: 400px;
-        
-    }
-  }
 
-  @keyframes animation-opacity-to-1 {
-    0%{
+    }
+}
+
+@keyframes animation-opacity-to-1 {
+    0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
-        
+
     }
-  }
-  @keyframes animation-opacity-to-0 {
-    0%{
+}
+
+@keyframes animation-opacity-to-0 {
+    0% {
         opacity: 1;
     }
+
     100% {
         opacity: 0;
-        
-    }
-  }
 
-  @keyframes show-slide-to-top-opacity {
-    0%{
+    }
+}
+
+@keyframes show-slide-to-top-opacity {
+    0% {
         transform: translateY(30px);
         opacity: 0;
     }
+
     100% {
         transform: translateY(0);
         opacity: 1;
     }
-  }
-  @keyframes hide-slide-to-top-opacity {
-    0%{
+}
+
+@keyframes hide-slide-to-top-opacity {
+    0% {
         transform: translateY(0);
         opacity: 1;
     }
+
     100% {
         transform: translateY(-30px);
         opacity: 0;
     }
-  }
-  @keyframes background-white {
-    0%{
+}
+
+@keyframes background-white {
+    0% {
         background-color: #202020;
-        
+
     }
+
     100% {
         background-color: #fff;
     }
-  }
-  @keyframes background-black {
-    0%{
+}
+
+@keyframes background-black {
+    0% {
         background-color: #fff;
     }
+
     100% {
         background-color: #202020;
     }
-  }
-  @keyframes width-to-100 {
-    0%{
+}
+
+@keyframes width-to-100 {
+    0% {
         width: 0;
     }
+
     100% {
         width: 100%;
     }
-  }
+}
 
-  @keyframes show-slide-to-top-news {
-    0%{
+@keyframes width-to-0 {
+    0% {
+        width: 100%;
+    }
+
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes transformx-to-0 {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes transformx-to-100 {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes show-slide-to-top-news {
+    0% {
         transform: translateY(30px);
         opacity: 0;
     }
+
     100% {
         transform: translateY(0);
         opacity: 1;
 
     }
-  }
-  @keyframes hide-slide-to-top-news {
-    0%{
+}
+
+@keyframes hide-slide-to-top-news {
+    0% {
         transform: translateY(0);
         opacity: 1;
     }
+
     100% {
         transform: translateY(-30px);
         opacity: 0;
 
     }
-  }
+}
 
 
-  @keyframes show-slide-to-bott-news {
-    0%{
+@keyframes show-slide-to-bott-news {
+    0% {
         transform: translateY(-30px);
         opacity: 0;
     }
+
     100% {
         transform: translateY(0);
         opacity: 1;
 
     }
-  }
-  @keyframes hide-slide-to-bott-news {
-    0%{
+}
+
+@keyframes hide-slide-to-bott-news {
+    0% {
         transform: translateY(0);
         opacity: 1;
     }
+
     100% {
         transform: translateY(30px);
         opacity: 0;
     }
-  }
+}

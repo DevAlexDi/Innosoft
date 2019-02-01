@@ -36,6 +36,38 @@
             }
         }
     }
+    &.hide-section{
+        .news-wrapp__left h3 span{
+            animation: hide-slide-to-top 0.25s 0.25s linear forwards;
+            transform: translate(0);
+        }
+        .nav-tabs{
+            li:nth-child(1){
+                a{
+                    animation: hide-slide-to-top 0.25s 0.35s linear forwards;
+                    transform: translate(0);
+                }
+            }
+            li:nth-child(2){
+                a{
+                    animation: hide-slide-to-top 0.25s 0.45s linear forwards;
+                    transform: translate(0);
+                }
+            }
+            li:nth-child(3){
+                a{
+                    animation: hide-slide-to-top 0.25s 0.55s linear forwards;
+                    transform: translate(0);
+                }
+            }
+        }
+        .cube-bg{
+            &__animation{
+                animation: width-to-0 0.55s 0.25s forwards;
+                width: 100%;
+            }
+        }
+    }
     .cube-bg{
         position: absolute;
         top: 96px;

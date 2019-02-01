@@ -30,235 +30,120 @@
             </div>
         </div>
         <!--/стартовый екран-->
+        
         <!--меню-->
-        <div class="menu always-hidden" id="menu">
+        <div class="menu always-hidden">
             <div class="main-container main-container--menu">
-                <div class="menu__list">
-                    <ul>
-                        <li>
-                            <span data-href="#projects-wr">projects</span>
-                        </li>
-                        <li>
-                            <span data-href="#about">about</span>
-                        </li>
-                        <li>
-                            <span data-href="#news">news</span>
-                        </li>
-                        <li>
-                            <span data-href="#contacts">contacts</span>
-                        </li>
-                    </ul>
-                    <div class="menu__list__footer">
-                        <a class="menu__list__footer__lng" href="#">RU</a>
-                        <p class="menu__list__footer__copy">© 2018 - 2099 All Rights Reserved</p>
+                <div class="menu__wrapp">
+                    <div class="menu__wrapp__left">
+                       
+                        <div class="menu__wrapp__left__logo">
+                            <img src="img/logo-nav.svg" class="img-responsive" alt="">
+                        </div>
+                        <ul class="menu__wrapp__left__list">
+                            <li>
+                                <span class="active" data-href="#projects-wr">Projects</span>
+                            </li>
+                            <li>
+                                <span data-href="#about">About</span>
+                            </li>
+                            <li>
+                                <span data-href="#news">News</span>
+                            </li>
+                            <li>
+                                <span data-href="#contacts">Contacts</span>
+                            </li>
+                        </ul>
+                     
+                    </div>
+                    <div class="menu__wrapp__right">
+                        <a href="#" class="active">EN</a>
+                        <a href="#">RU</a>
                     </div>
                 </div>
             </div>
         </div>
         <!--/меню-->
-        <!--гамбургер меню-->
-        <button class="open-close-menu"></button>
-        <!--/гамбургер меню-->
+        
+        
         <!--проекты-->
-        <div class="projects-wr page always-hidden" id="projects-wr">
-            <div class="projects-wr__title">
-                <div class="main-container main-container--title-projects">
-                    <!--название, описание, текст первого слайда-->
-                    <p class="projects-wr__title__count-sildes">
-                        <span class="projects-wr__title__count-sildes__selected">01</span>
-                        <span class="projects-wr__title__count-sildes__count"></span>
-                    </p>
-                    <div class="projects-wr__title__text">
-                        <p class="name-project">yorso</p>
+        <div class="projects-wr page always-hidden " id="projects-wr">
+            <div class="main-container main-container--news">
+                <div class="projects-wrapp">
+                    <div class="projects-wrapp__left">
+                        <ul class="nav nav-tabs">
+                            <li class="active">
+                                <a data-toggle="tab" href="#projects-tab-1">Yorso</a>
+                            </li>
+                            <li>
+                                <a data-toggle="tab" href="#projects-tab-2">Investore</a>
+                            </li>
+                            <li>
+                                <a data-toggle="tab" href="#projects-tab-3">ITS</a>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="small-descr-project">
-                        <p class="small-descr-project__text">The only online solution for traditional business</p>
-                    </div>
-                     <!--/название, описание, текст первого слайда-->
-                </div>
-                <!--кнопка-->
-                <p class="view-project">
-                    <span class="view-project__butt">more info</span>
-                </p>
-            </div>
-            <div class="projects" id="projects">
-                <div class="project__slide project__slide--1 visible-scroll-bott" id="proj-1">
-                    <div class="project__slide__closed-wrapp" style="background-image: url(img/yourso-bg.jpg)">
-                        <div class="close-project-wrapp">
-                            <div class="close-project-wrapp__width">
-                                <!--кнопка закрытия-->
-                                <button class="close-project"></button>
-                                <!--/кнопка закрытия-->
+                    <div class="projects-wrapp__right">
+                        <div class="tab-content">
+                            <div id="projects-tab-1" class="tab-pane fade in active">
+                                <h3 class="projects-wrapp__right__title">The only online solution for traditional business</h3>
+                                <p class="projects-wrapp__right__text">Yorso is an online b2b platform for fish and seafood wholesale market. The service automates key business processes while decreasing transactional costs for 10-30%. At present the project team works on the implementation of Logistics Supply Chain concept and scaling to the new markets.</p>
+                                <ul class="projects-wrapp__right__list">
+                                    <li>Transparent and convenient EDX</li>
+                                    <li>Automate sales, purchase and logistics</li>
+                                    <li>Scale to new markets</li>
+                                </ul>
+                                <a href="#" class="projects-wrapp__right__link">Visit website</a>
                             </div>
-                        </div>
-                        <div class="gradient-bg gradient-bg--1"></div>
-                    </div>
-                    <div class="proj-main-descr always-hidden">
-                        <div class="start__scroller start__scroller--scroller-projects-opened">
-                            <div class="start__scroller__line"></div>
-                        </div>
-                        <div class="proj-main-descr__top">
-                            <div class="proj-main-descr__top__width">
-                                <p>
-                                    Yorso is an online b2b platform for fish 
-                                    and seafood wholesale market. The service automates key 
-                                    business processes while decreasing transactional costs 
-                                    for 10-30%. At present the project team works on the implementation 
-                                    of Logistics Supply Chain concept and scaling to the new markets.
-                                </p>
-
+                            <div id="projects-tab-2" class="tab-pane fade">
+                                <h3 class="projects-wrapp__right__title">Accessible and state-of-art online investments to commercial property</h3>
+                                <p class="projects-wrapp__right__text">Online investment tool to commercial property with the minimum input of 10000₽. The project is growing rapidly due to the accessibility to a wide range of investors. It plans to enter international investment markets. The high profitability up to 40% encourages clients not only to stay with the project but increase their investments to commercial property.</p>
+                                <ul class="projects-wrapp__right__list">
+                                    <li>Helps make investments into commercial property</li>
+                                    <li>Provides a passive income with minimum investment</li>
+                                    <li>Ensures deals transparency and validity</li>
+                                </ul>
+                                <a href="#" class="projects-wrapp__right__link">Visit website</a>
+                                
+                                
                             </div>
-                            <div class="proj-main-descr__top__width proj-main-descr__top__width--list">
-                                <div class="proj-main-descr__top__width__item">
-                                    <p>Transparent and convenient EDX</p>
-                                </div>
-                                <div class="proj-main-descr__top__width__item">
-                                    <p>Automate sales, purchase and logistics</p>
-                                </div>
-                                <div class="proj-main-descr__top__width__item">
-                                    <p>Scale to new markets</p>
-                                </div>
-                            </div>
-                            <div class="proj-main-descr__top__links">
-                                <div class="proj-main-descr__top__links__item
-                                            proj-main-descr__top__links__item--black">
-                                    <a href="https://yorso.com" target="_blank">
-                                        <span class="big-t">yorso.com</span>
-                                        <span class="sm-t">visit website</span>
-                                    </a>
-                                </div>
-                                <div class="proj-main-descr__top__links__item">
-                                    <span class="hover-zone-project">
-                                        <span class="big-t uppercase">INVESTORE</span>
-                                        <span class="sm-t">next project</span>
-                                    </span>
-                                    <div class="proj-main-descr__top__links__item--colored
-                                                proj-main-descr__top__links__item--color-1">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="project__slide project__slide--2" id="proj-2">
-                    <div class="project__slide__closed-wrapp" style="background-image: url(img/inv-bg.jpg)">
-                        <div class="close-project-wrapp">
-                            <div class="close-project-wrapp__width">
-                                <button class="close-project"></button>
-                            </div>
-                        </div>
-                        <div class="gradient-bg gradient-bg--2"></div>
-                    </div>
-                    <div class="proj-main-descr always-hidden">
-                        <div class="start__scroller start__scroller--scroller-projects-opened">
-                            <div class="start__scroller__line"></div>
-                        </div>
-                        <div class="proj-main-descr__top">
-                            <div class="proj-main-descr__top__width">
-                                <p>
-                                    Online investment tool to commercial property with the 
-                                    minimum input of 10000₽. The project is growing rapidly due 
-                                    to the accessibility to a wide range of investors. It plans 
-                                    to enter international investment markets. The high profitability 
-                                    up to 40% encourages clients not only to stay with the project 
-                                    but increase their investments to commercial property.
-                                </p>
-
-                            </div>
-                            <div class="proj-main-descr__top__width proj-main-descr__top__width--list">
-                                <div class="proj-main-descr__top__width__item">
-                                    <p>Helps make investments into 
-                                        commercial property</p>
-                                </div>
-                                <div class="proj-main-descr__top__width__item">
-                                    <p>Provides a passive income
-                                            with minimum investment</p>
-                                </div>
-                                <div class="proj-main-descr__top__width__item">
-                                    <p>Ensures deals transparency
-                                            and validity</p>
-                                </div>
-                            </div>
-                            <div class="proj-main-descr__top__links">
-                                <div class="proj-main-descr__top__links__item
-                                            proj-main-descr__top__links__item--black">
-                                    <a href="http://investore.club/" target="_blank">
-                                        <span class="big-t">investore.club</span>
-                                        <span class="sm-t">visit website</span>
-                                    </a>
-                                </div>
-                                <div class="proj-main-descr__top__links__item">
-                                    <span class="hover-zone-project">
-                                        <span class="big-t uppercase">ITS</span>
-                                        <span class="sm-t">next project</span>
-                                    </span>
-                                    <div class="proj-main-descr__top__links__item--colored
-                                                proj-main-descr__top__links__item--color-2">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="project__slide project__slide--3" id="proj-3">
-                    <div class="project__slide__closed-wrapp" style="background-image: url(img/its.jpg)">
-                        <div class="close-project-wrapp">
-                            <div class="close-project-wrapp__width">
-                                <button class="close-project"></button>
-                            </div>
-                        </div>
-                        <div class="gradient-bg gradient-bg--3"></div>
-                    </div>
-                    <div class="proj-main-descr always-hidden">
-                        <div class="start__scroller start__scroller--scroller-projects-opened">
-                            <div class="start__scroller__line"></div>
-                        </div>
-                        <div class="proj-main-descr__top">
-                            <div class="proj-main-descr__top__width">
-                                <p>
-                                    The project implements Smart City concept. 
-                                    In 2018 the project team brought two solutions for transport 
-                                    infrastructure optimization to the market. The first one 
-                                    is a software service to predict road state based on the 
-                                    meteorological data. The second solution is a software and hardware 
-                                    complex that analyzes traffic video data. 
-                                </p>
-                            </div>
-                            <div class="proj-main-descr__top__width proj-main-descr__top__width--list">
-                                <div class="proj-main-descr__top__width__item">
-                                    <p>Collect actual transport
-                                            infrastructure data</p>
-                                </div>
-                                <div class="proj-main-descr__top__width__item">
-                                    <p>Bring transparency
-                                            into road maintenance</p>
-                                </div>
-                                <div class="proj-main-descr__top__width__item">
-                                    <p>Analyze road traffic</p>
-                                </div>
-                            </div>
-                            <div class="proj-main-descr__top__links">
-                                <div class="proj-main-descr__top__links__item
-                                            proj-main-descr__top__links__item--black">
-                                    <a href="https://itcv.innosoft.pro/index" target="_blank">
-                                        <span class="big-t">itcv.innosoft.pro</span>
-                                        <span class="sm-t">visit website</span>
-                                    </a>
-                                </div>
-                                <div class="proj-main-descr__top__links__item">
-                                    <span class="hover-zone-project">
-                                        <span class="big-t uppercase">YORSO</span>
-                                        <span class="sm-t">next project</span>
-                                    </span>
-                                    <div class="proj-main-descr__top__links__item--colored
-                                                proj-main-descr__top__links__item--color-3">
-                                    </div>
-                                </div>
+                            <div id="projects-tab-3" class="tab-pane fade">
+                                <h3 class="projects-wrapp__right__title">Newest data technologies to monitor transport infrastructure</h3>
+                                <p class="projects-wrapp__right__text">The project implements Smart City concept. In 2018 the project team brought two solutions for transport infrastructure optimization to the market. The first one is a software service to predict road state based on the meteorological data. The second solution is a software and hardware complex that analyzes traffic video data.</p>
+                                <ul class="projects-wrapp__right__list">
+                                    <li>Collect actual transport infrastructure data</li>
+                                    <li>Bring transparency into road maintenance</li>
+                                    <li>Analyze road traffic</li>
+                                </ul>
+                                <a href="#" class="projects-wrapp__right__link">Visit website</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            
+            <div class="cube-bg">
+                <div class="cube-bg__animation" style="background-image: url(img/modal-1.jpg)"></div>
+            </div>
+            <div class="cube-bg">
+                <div class="cube-bg__animation" style="background-image: url(img/modal-2.jpg)"></div>
+            </div>
+            <div class="cube-bg">
+                <div class="cube-bg__animation" style="background-image: url(img/modal-3.jpg)"></div>
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             <!--проекты планшет / телефон-->
             <div class="sm-projects">
                 <h3 class="sm-projects__title">projects</h3>
@@ -357,7 +242,7 @@
                         
                     </div>
                 </div>
-                <div class="about-sl__slide about-sl-2 ">
+                <div class="about-sl__slide about-sl-2">
                     <div class="about-sl-2__wrapp">
                         <div class="main-container main-container--about">
                             <h3 class="xs-title-about">team</h3>
