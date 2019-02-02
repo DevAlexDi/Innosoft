@@ -16,6 +16,7 @@ $(document).ready(function(){
 
         window.addEventListener('touchstart', function(event) {
           startPoint = event.changedTouches[0].pageY;
+            console.log('startPoint: ',startPoint);
         }, false);
 
 
@@ -48,6 +49,12 @@ $(document).ready(function(){
         }, false);
 
         //projects
+        
+        //bg project
+        $('.projects-wrapp__left a').click(function(){
+            $('.cube-bg').removeClass('cube-bg-show');
+            $('.cube-bg:nth-child('+($(this).parent().index() + 1)+')').addClass('cube-bg-show');
+        })
         
         
         elProjects.addEventListener("wheel", function (event) {
@@ -89,7 +96,9 @@ $(document).ready(function(){
         //touch
         elProjects.addEventListener("touchend", function (event) {
             if(canAnimateAbout){
+                endPoint = event.changedTouches[0].pageY;
                 if ((endPoint - startPoint) < -50) {
+                    console.log('endPoint: ',endPoint);
                    canAnimateAbout = false;
                     $('.page').each(function(){
                         if($(this).hasClass('visible')){
@@ -118,7 +127,7 @@ $(document).ready(function(){
                     },650);
                     setTimeout(function(){
                         canAnimateAbout = true;
-                    },1350);
+                    },600);
                 }
             }
         }, true);
@@ -344,7 +353,7 @@ $(document).ready(function(){
 
         //touch
         elAbout.addEventListener("touchend", function (event) {
-            
+            endPoint = event.changedTouches[0].pageY;
             if(canAnimateAbout){
                 if((endPoint - startPoint) > 50) {
                     console.log('вверх');
@@ -374,7 +383,7 @@ $(document).ready(function(){
                         },650);
                         setTimeout(function(){
                             canAnimateAbout = true;
-                        },1350); 
+                        },600); 
                         return;
                     }
                     AboutClassesScrollTop(activeSlideAbout);
@@ -409,7 +418,7 @@ $(document).ready(function(){
                         },650);
                         setTimeout(function(){
                             canAnimateAbout = true;
-                        },1350); 
+                        },600); 
                         return;
                     }
                     AboutClassesScrollBott(activeSlideAbout);
@@ -445,6 +454,32 @@ $(document).ready(function(){
             },500);
         }
 
+        //arrows click
+        $('.arrows-news-wrapp__butt--top').click(function(){
+           if(canAnimate){
+               canAnimate = false;
+                activeSlideNews -= 1;
+                if(activeSlideNews < 0){
+                    activeSlideNews = ($('.tab-pane.active .new-content__counter__item .news-animation').length - 1);
+                }
+                newsScrollTop(activeSlideNews)
+           }
+        });
+        $('.arrows-news-wrapp__butt--bott').click(function(){
+           if(canAnimate){
+                canAnimate = false;
+                activeSlideNews += 1;
+                if(activeSlideNews >= $('.tab-pane.active .new-content__counter__item .news-animation').length){
+                    activeSlideNews = 0;
+                }
+                newsScrollBott(activeSlideNews);
+           }
+        });
+        
+       
+       
+        
+        
         
         //news scroll page
         
@@ -508,6 +543,7 @@ $(document).ready(function(){
         });
         //touch
         $('.news').on('touchend', function (event) {
+            
             if(canAnimateAbout){
                 endPoint=event.originalEvent.changedTouches[0].pageY;
                 if((endPoint - startPoint) > 50) {
@@ -539,7 +575,7 @@ $(document).ready(function(){
                     },750);
                     setTimeout(function(){
                         canAnimateAbout = true;
-                    },1350);
+                    },600);
                 }
                 else if ((endPoint - startPoint) < -50) {
                     canAnimateAbout = false;
@@ -560,7 +596,7 @@ $(document).ready(function(){
                     },750);
                     setTimeout(function(){
                         canAnimateAbout = true;
-                    },1350);
+                    },600);
                 }
             }
         });
@@ -593,6 +629,7 @@ $(document).ready(function(){
         //touch
         $('.news-wrapp__right, .cube-bg').on('touchend', function (event) {
             event.stopPropagation();
+            
             if(canAnimate){
                 endPoint=event.originalEvent.changedTouches[0].pageY;
                 if((endPoint - startPoint) > 50) {
@@ -659,6 +696,7 @@ $(document).ready(function(){
         //touch
         elContacts.addEventListener("touchend", function (event) {
             if(canAnimateAbout){
+                endPoint = event.changedTouches[0].pageY;
                 if ((endPoint - startPoint) > 50) {
                    canAnimateAbout = false;
                     $('.page').each(function(){
@@ -678,7 +716,7 @@ $(document).ready(function(){
                     },650);
                     setTimeout(function(){
                         canAnimateAbout = true;
-                    },1350);
+                    },600);
                 }
             }
         }, true);

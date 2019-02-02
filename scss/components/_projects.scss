@@ -4,6 +4,9 @@
     background-color: #202020;
     position: relative;
     overflow: hidden!important;
+    @media (max-width: 1199px){
+        background: transparent;
+    }
     &.visible{
         .start__scroller--scroller-projects{
             position: fixed;
@@ -83,15 +86,17 @@
         top: 144px;
         right: 0;
         width: 60%;
-        height: 792px;
+        height: 710px;
+        transition: 0.3s;
+        opacity: 0;
         @media (max-width: 1919px){
             height: 674px;
         }
         @media (max-width: 1599px){
-            height: 576px;
+            height: 460px;
         }
         @media (max-width: 1300px){
-            height: 674px;
+            height: 600px;
             top: 139px;
         }
         &__animation{
@@ -104,6 +109,9 @@
             right: 0;
             background-size: cover;
             background-position: center;
+        }
+        &.cube-bg-show{
+            opacity: 1;
         }
     }
 }
@@ -193,8 +201,9 @@
 .projects-wrapp{
     display: flex;
     @media (max-width: 1199px){
-        display: block;
+        
         padding-top: 120px;
+        display: none;
     }
     @media (max-width: 767px){
         padding-top: 82px;
@@ -206,14 +215,21 @@
         flex-direction: column;
         justify-content: center;
         transform: translateY(144px);
+        height: 710px;
+        
+        
         @media (max-width: 1919px){
             //padding-top: 227px;
+            height: 674px;
         }
         @media (max-width: 1599px){
             //padding-top: 161px;
+            height: 460px;
         }
         @media (max-width: 1300px){
             //padding-top: 265px;
+            height: 600px;
+            top: 139px;
         }
         @media (max-width: 1199px){
             padding-top: 0;
@@ -248,11 +264,18 @@
             color: #FFFFFF;
             font-weight: $b;
             margin-bottom: 64px;
+            margin-top: 0;
+            @media (max-width: 1599px){
+                margin-bottom: 36px;
+            }
         }
         &__text{
             font-size: 13px;
             color: #FFFFFF;
             margin-bottom: 110px;
+            @media (max-width: 1599px){
+                margin-bottom: 60px;
+            }
         }
         &__list{
             display: flex;
@@ -260,6 +283,9 @@
             padding: 0;
             margin: 0;
             margin-bottom: 50px;
+            @media (max-width: 1599px){
+                margin-bottom: 40px;
+            }
             li{
                 width: 33.33%;
                 padding-top: 23px;

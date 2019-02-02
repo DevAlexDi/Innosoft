@@ -5,6 +5,13 @@
     background-color: #202020;
     position: relative;
     overflow: hidden!important;
+    @media (max-width: 1199px){
+        padding: 0 64px;
+        background: #fff;
+    }
+    @media (max-width: 767px){
+        padding: 0;
+    }
     &.visible{
         .contacts__wrapp__bott{
             animation: show-slide-to-top 0.3s 0.25s ease-out forwards;
@@ -586,16 +593,28 @@
 .footer-xs{
     display: none;
     @media (max-width: 1199px){
-        display: block;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         background: #202020;
         padding: 50px 64px;
     }
     @media (max-width: 767px){
         padding: 34px 16px;
+        display: block;
     }
     p{
         line-height: 17px;
         font-size: 14px;
         color: rgba(255, 255, 255, 0.25);
+        display: flex;
+        align-items: center;
+        img{
+            margin-left: 5px;
+            display: block;
+            position: relative;
+            top: -1px;
+        }
+        
     }
 }

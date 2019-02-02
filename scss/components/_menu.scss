@@ -38,6 +38,9 @@
                 &.active{
                     color: rgba(34, 2, 0, 0.95);
                 }
+                &:after{
+                    background: rgba(34, 2, 0, 0.3);
+                }
             }
         }
     }
@@ -48,6 +51,9 @@
         padding: 32px 0 16px 0;
         border-bottom: 1px solid rgba(255, 255, 255, 0.3);
         transition: 0.3s;
+        @media (max-width: 1919px){
+            padding: 16px 0;
+        }
         &__left{
             display: flex;
             align-items: center;
@@ -96,7 +102,7 @@
                     content: "";
                     display: block;
                     position: absolute;
-                    top: 0;
+                    top: 3px;
                     right: -0.5px;
                     width: 1px;
                     height: 12px;

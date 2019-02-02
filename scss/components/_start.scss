@@ -5,6 +5,7 @@
     position: relative;
     @media (max-width: 1199px){
         padding-bottom: 180px;
+        overflow: inherit!important;
     }
     @media (max-width: 767px){
         padding-bottom: 130px;
@@ -29,8 +30,10 @@
         transition: 0.5s;
         opacity: 0;
         @media (max-width: 1199px){
-            display: none;
-            background-image: none;
+            height: 1024px;
+        }
+        @media (max-width: 767px){
+            height: 587px;
         }
     }
     &__logo{
@@ -169,6 +172,38 @@
             height: 64px;
             background: rgba(255, 255, 255, 0.8);
             animation: line-move 2s ease-out infinite;
+        }
+    }
+}
+.abs-footer-start{
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    width: 100%;
+    @media (max-width: 1199px){
+        display: none;
+    }
+    &__flex{
+        display: flex;
+        justify-content: space-between;
+        p{
+            margin-bottom: 0;
+        }
+        &__reserv{
+            line-height: 16px;
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.4);
+        }
+        &__love{
+            line-height: 16px;
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.4);
+            display: flex;
+            align-items: center;
+            img{
+                flex-shrink: 0;
+                margin-left: 5px;
+            }
         }
     }
 }
