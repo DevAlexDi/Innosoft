@@ -12,6 +12,10 @@
     height: 100vh;
     margin: 0;
     position: relative;
+    &.slider-initialized{
+        height: auto;
+        min-height: 100vh;
+    }
     &:before{
         content: "";
         position: absolute;
