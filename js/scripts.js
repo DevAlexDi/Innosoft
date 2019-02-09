@@ -99,7 +99,7 @@ $(document).ready(function(){
                     }
                     setTimeout(function(){
                         canAnimateAbout = true;
-                    },500);
+                    },800);
                     $('.nav-tabs a[href="#projects-tab-'+(activeSlideProjects+1)+'"]').tab('show');
                     $('.cube-bg').removeClass('cube-bg-show');
                     $('.cube-bg:nth-child('+(activeSlideProjects + 1)+')').addClass('cube-bg-show');
@@ -129,7 +129,7 @@ $(document).ready(function(){
                     }
                     setTimeout(function(){
                         canAnimateAbout = true;
-                    },500);
+                    },800);
                     $('.nav-tabs a[href="#projects-tab-'+(activeSlideProjects+1)+'"]').tab('show');
                     $('.cube-bg').removeClass('cube-bg-show');
                     $('.cube-bg:nth-child('+(activeSlideProjects + 1)+')').addClass('cube-bg-show');
@@ -166,7 +166,7 @@ $(document).ready(function(){
                     }
                     setTimeout(function(){
                         canAnimateAbout = true;
-                    },500);
+                    },800);
                     $('.nav-tabs a[href="#projects-tab-'+(activeSlideProjects+1)+'"]').tab('show');
                     $('.cube-bg').removeClass('cube-bg-show');
                     $('.cube-bg:nth-child('+(activeSlideProjects + 1)+')').addClass('cube-bg-show');
@@ -208,7 +208,7 @@ $(document).ready(function(){
                     }
                     setTimeout(function(){
                         canAnimateAbout = true;
-                    },500);
+                    },800);
                     $('.nav-tabs a[href="#projects-tab-'+(activeSlideProjects+1)+'"]').tab('show');
                     $('.cube-bg').removeClass('cube-bg-show');
                     $('.cube-bg:nth-child('+(activeSlideProjects + 1)+')').addClass('cube-bg-show');
@@ -594,7 +594,7 @@ $(document).ready(function(){
                     }
                     setTimeout(function(){
                         canAnimateAbout = true;
-                    },500);
+                    },800);
                     $('.news-wrapp__left .nav-tabs a[href="#news-tab-'+(activeSlideNewsTabs+1)+'"]').tab('show');
                 }
                 if(event.originalEvent.deltaY < 0){
@@ -635,7 +635,7 @@ $(document).ready(function(){
                     }
                     setTimeout(function(){
                         canAnimateAbout = true;
-                    },500);
+                    },800);
                     $('.news-wrapp__left .nav-tabs a[href="#news-tab-'+(activeSlideNewsTabs+1)+'"]').tab('show');
                     
                 }
@@ -681,7 +681,7 @@ $(document).ready(function(){
                         },750);
                         setTimeout(function(){
                             canAnimateAbout = true;
-                        },600);
+                        },800);
                         return;
                     }
                     setTimeout(function(){
@@ -716,7 +716,7 @@ $(document).ready(function(){
                     }
                     setTimeout(function(){
                         canAnimateAbout = true;
-                    },500);
+                    },800);
                     $('.news-wrapp__left .nav-tabs a[href="#news-tab-'+(activeSlideNewsTabs+1)+'"]').tab('show');
                 }
             }

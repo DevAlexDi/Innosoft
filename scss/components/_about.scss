@@ -256,6 +256,13 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        padding-top: 105px;
+        @media (max-width: 1919px){
+            padding-top: 89px;
+        }
+        @media (max-width: 1199px){
+            padding-top: 0;
+        }
         &__title{
             position: relative;
             overflow: hidden;
@@ -270,6 +277,7 @@
             }
             @media (max-width: 1599px){
                 margin-bottom: 10px;
+                font-size: 70px;
             }
             @media (max-width: 1199px){
                 line-height: 36px;
@@ -281,16 +289,10 @@
                 padding: 0 64px;
             }
             @media (max-width: 1599px){
-                font-size: 70px;
-                padding-top: 30px;
+                
+                
             }
-            @media (max-width: 1199px){
-                line-height: 36px;
-                font-size: 25px;
-                padding: 0 64px;
-
-                color: #202020;
-            }
+            
             @media (max-width: 767px){
                 padding: 0 16px;
                 margin: 82px 0 18px 0;
