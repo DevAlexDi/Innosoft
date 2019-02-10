@@ -16,11 +16,13 @@ $(document).ready(function(){
 
         window.addEventListener('touchstart', function(event) {
           startPoint = event.changedTouches[0].pageY;
+            console.log('touch start');
         }, false);
 
 
         //start to menu
         elStart.addEventListener("wheel", function (event) {
+            
             if(event.deltaY > 0){
                 $('.start').fadeOut(200,function(){
                     $('.start').removeClass('visible');
@@ -61,6 +63,7 @@ $(document).ready(function(){
         
         elProjects.addEventListener("wheel", function (event) {
             if(canAnimateAbout){
+                console.log('scroll');
                 if(event.deltaY > 0){
                     //вниз
                     canAnimateAbout = false;
@@ -140,6 +143,7 @@ $(document).ready(function(){
         //touch
         elProjects.addEventListener("touchend", function (event) {
             if(canAnimateAbout){
+                console.log('touch end');
                 endPoint = event.changedTouches[0].pageY;
                 if((endPoint - startPoint) > 50) {
                     activeSlideProjects -= 1;
