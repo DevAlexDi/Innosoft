@@ -18,24 +18,7 @@ $(document).ready(function(){
         var startPoint ;
         var endPoint ;
         var touchDelta = 0;
-
         var prevTime = new Date().getTime();
-        var f = function(){
-            var curTime = new Date().getTime();
-if(typeof prevTime !== 'undefined'){
-    var timeDiff = curTime-prevTime;
-    if(timeDiff>200){
-
-
-
-
-
-
-    }
-}
-prevTime = curTime;
-
-        }
         
         
         
@@ -98,7 +81,6 @@ prevTime = curTime;
                 if(typeof prevTime !== 'undefined'){
                     var timeDiff = curTime-prevTime;
                     if(timeDiff>200){
-                        console.log('scroll');
                         canAnimateAbout = false;
                         if(event.deltaY > 0){
                             //вниз
@@ -182,7 +164,6 @@ prevTime = curTime;
         //touch
         elProjects.addEventListener("touchend", function (event) {
             if(canAnimateAbout){
-                console.log('touch end');
                 endPoint = event.changedTouches[0].pageY;
                 if((endPoint - startPoint) > 50) {
                     activeSlideProjects -= 1;
@@ -845,14 +826,10 @@ prevTime = curTime;
 
         elContacts.addEventListener("wheel", function (event) {
             if(canAnimateAbout){
-                console.log('break1');
-                
                 if(event.deltaY < 0){
                     canAnimateAbout = false;
-                    console.log('break2');
                     var curTime = new Date().getTime();
                     if(typeof prevTime !== 'undefined'){
-                        console.log('break3');
                         var timeDiff = curTime-prevTime;
                         if(timeDiff>200){
                             $('.page').each(function(){
@@ -877,8 +854,6 @@ prevTime = curTime;
                     }
                     prevTime = curTime;
                 }
-                
-
             }
         }, true);
 
