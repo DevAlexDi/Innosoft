@@ -16,7 +16,7 @@ $(document).ready(function(){
 
         window.addEventListener('touchstart', function(event) {
           startPoint = event.changedTouches[0].pageY;
-            console.log('touch start');
+            
         }, false);
 
 
@@ -64,9 +64,10 @@ $(document).ready(function(){
         elProjects.addEventListener("wheel", function (event) {
             if(canAnimateAbout){
                 console.log('scroll');
+                canAnimateAbout = false;
                 if(event.deltaY > 0){
                     //вниз
-                    canAnimateAbout = false;
+                    
                     activeSlideProjects += 1;
                     if(activeSlideProjects >= $('.projects-wrapp__left li').length){
                         activeSlideProjects -= 1;
@@ -109,7 +110,7 @@ $(document).ready(function(){
                 }
                 if(event.deltaY < 0){
                     activeSlideProjects -= 1;
-                    canAnimateAbout = false;
+                    
                     if(activeSlideProjects < 0){
                         activeSlideProjects += 1;
                         $('.page').each(function(){
@@ -138,7 +139,7 @@ $(document).ready(function(){
                     $('.cube-bg:nth-child('+(activeSlideProjects + 1)+')').addClass('cube-bg-show');
                 }
             }
-        });
+        }, true);
 
         //touch
         elProjects.addEventListener("touchend", function (event) {
@@ -372,8 +373,9 @@ $(document).ready(function(){
 
         elAbout.addEventListener("wheel", function (event) {
             if(canAnimateAbout){
+                canAnimateAbout = false;
                 if(event.deltaY > 0){
-                    canAnimateAbout = false;
+                    
                     activeSlideAbout += 1;
                     if(activeSlideAbout >= $('.about-sl__slide').length){
                         activeSlideAbout -= 1;
@@ -405,7 +407,7 @@ $(document).ready(function(){
                     AboutClassesScrollBott(activeSlideAbout);
                 }
                 if(event.deltaY < 0){
-                    canAnimateAbout = false;
+                    
                     activeSlideAbout -= 1;
                     if(activeSlideAbout < 0){
                         activeSlideAbout += 1;
@@ -437,7 +439,7 @@ $(document).ready(function(){
                     AboutClassesScrollTop(activeSlideAbout)
                 }
             }
-        });
+        }, true);
 
         //touch
         elAbout.addEventListener("touchend", function (event) {
@@ -570,8 +572,9 @@ $(document).ready(function(){
                 activeSlideNews = 0;
                 $('.news-animation').removeClass('hide-scroll-bott visible-scroll-bott hide-scroll-top visible-scroll-top');
                 $('.news-animation:nth-child(1)').addClass('visible-scroll-bott');
+                canAnimateAbout = false;
                 if(event.originalEvent.deltaY > 0){
-                    canAnimateAbout = false;
+                    
                     activeSlideNewsTabs += 1;
                     
                     if(activeSlideNewsTabs >= $('.news-wrapp__left .nav li').length){
@@ -603,7 +606,7 @@ $(document).ready(function(){
                 }
                 if(event.originalEvent.deltaY < 0){
                     activeSlideNewsTabs -= 1;
-                    canAnimateAbout = false;
+                    
                     if(activeSlideNewsTabs < 0){
                         activeSlideNewsTabs += 1;
                         $('.page').each(function(){
@@ -789,8 +792,9 @@ $(document).ready(function(){
 
         elContacts.addEventListener("wheel", function (event) {
             if(canAnimateAbout){
+                canAnimateAbout = false;
                 if(event.deltaY < 0){
-                    canAnimateAbout = false;
+                    
                     $('.page').each(function(){
                         if($(this).hasClass('visible')){
                             $(this).addClass('hide-section');
@@ -811,7 +815,7 @@ $(document).ready(function(){
                     },1350); 
                 }
             }
-        });
+        }, true);
 
         //touch
         elContacts.addEventListener("touchend", function (event) {
@@ -839,7 +843,7 @@ $(document).ready(function(){
                     },600);
                 }
             }
-        });
+        }, true);
         
         
         
