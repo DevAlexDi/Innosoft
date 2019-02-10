@@ -30,10 +30,10 @@ $(document).ready(function(){
 
         //start to menu
         elStart.addEventListener("wheel", function (event) {
-            var curTime = new Date().getTime();
-            if(typeof prevTime !== 'undefined'){
-                var timeDiff = curTime-prevTime;
-                if(timeDiff>200){
+//            var curTime = new Date().getTime();
+//            if(typeof prevTime !== 'undefined'){
+//                var timeDiff = curTime-prevTime;
+//                if(timeDiff>200){
                     if(event.deltaY > 0){
                         $('.start').fadeOut(200,function(){
                             $('.start').removeClass('visible');
@@ -44,9 +44,9 @@ $(document).ready(function(){
 
                         });
                     }
-                }
-            }
-            prevTime = curTime;
+//                }
+//            }
+//            prevTime = curTime;
         }, true);
 
         //start to menu touch
