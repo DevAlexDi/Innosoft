@@ -138,7 +138,7 @@ $(document).ready(function(){
                     $('.cube-bg:nth-child('+(activeSlideProjects + 1)+')').addClass('cube-bg-show');
                 }
             }
-        }, true);
+        });
 
         //touch
         elProjects.addEventListener("touchend", function (event) {
@@ -437,7 +437,7 @@ $(document).ready(function(){
                     AboutClassesScrollTop(activeSlideAbout)
                 }
             }
-        }, true);
+        });
 
         //touch
         elAbout.addEventListener("touchend", function (event) {
@@ -811,7 +811,7 @@ $(document).ready(function(){
                     },1350); 
                 }
             }
-        }, true);
+        });
 
         //touch
         elContacts.addEventListener("touchend", function (event) {
@@ -839,7 +839,7 @@ $(document).ready(function(){
                     },600);
                 }
             }
-        }, true);
+        });
         
         
         
