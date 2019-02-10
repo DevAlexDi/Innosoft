@@ -1,5 +1,26 @@
 $(document).ready(function(){
    
+    var prevTime = new Date().getTime();
+    var f = function(){
+        var curTime = new Date().getTime();
+        if(typeof prevTime !== 'undefined'){
+            var timeDiff = curTime-prevTime;
+            if(timeDiff>200){
+                
+                
+                
+                
+                
+                
+            }
+        }
+        prevTime = curTime;
+        
+    }
+    
+    $(window).on('mousewheel', f);
+    
+    
     var widthScreen = $(window).width();
     var canAnimate  = true;
     
@@ -63,6 +84,10 @@ $(document).ready(function(){
         
         elProjects.addEventListener("wheel", function (event) {
             if(canAnimateAbout){
+                var curTime = new Date().getTime();
+        if(typeof prevTime !== 'undefined'){
+            var timeDiff = curTime-prevTime;
+            if(timeDiff>200){
                 console.log('scroll');
                 canAnimateAbout = false;
                 if(event.deltaY > 0){
@@ -138,6 +163,9 @@ $(document).ready(function(){
                     $('.cube-bg').removeClass('cube-bg-show');
                     $('.cube-bg:nth-child('+(activeSlideProjects + 1)+')').addClass('cube-bg-show');
                 }
+                }
+        }
+        prevTime = curTime;
             }
         }, true);
 
