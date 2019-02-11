@@ -22,11 +22,11 @@ $(document).ready(function(){
         
          
 
-//        $(window).on('mousewheel', function(e){
-//             e.preventDefault();
-//            var curTime = new Date().getTime();
-//            prevTime = curTime;
-//        });
+        $(window).on('mousewheel', function(e){
+             e.preventDefault();
+            var curTime = new Date().getTime();
+            prevTime = curTime;
+        });
         
         window.addEventListener('touchstart', function(event) {
           startPoint = event.changedTouches[0].pageY;
@@ -54,7 +54,7 @@ $(document).ready(function(){
                 }
             }
             prevTime = curTime;
-        });
+        }, true);
 
         //start to menu touch
         elStart.addEventListener('touchend', function(event) {
@@ -176,7 +176,7 @@ $(document).ready(function(){
                 }
             prevTime = curTime;
             }
-        });
+        }, true);
 
         //touch
         elProjects.addEventListener("touchend", function (event) {
@@ -483,7 +483,7 @@ $(document).ready(function(){
                 }
                 prevTime = curTime;
             }
-        });
+        }, true);
 
         //touch
         elAbout.addEventListener("touchend", function (event) {
@@ -874,7 +874,7 @@ $(document).ready(function(){
                     prevTime = curTime;
                 }
             }
-        });
+        }, true);
 
         //touch
         elContacts.addEventListener("touchend", function (event) {
