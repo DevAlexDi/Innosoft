@@ -22,11 +22,11 @@ $(document).ready(function(){
         
          
 
-        $(window).on('mousewheel', function(e){
-             e.preventDefault();
-            var curTime = new Date().getTime();
-            prevTime = curTime;
-        });
+//        $(window).on('mousewheel', function(e){
+//             e.preventDefault();
+//            var curTime = new Date().getTime();
+//            prevTime = curTime;
+//        });
         
         window.addEventListener('touchstart', function(event) {
           startPoint = event.changedTouches[0].pageY;
