@@ -20,24 +20,13 @@ $(document).ready(function(){
         var touchDelta = 0;
         var prevTime = new Date().getTime();
         
-//         var f = function(){
-//            var curTime = new Date().getTime();
-//            if(typeof prevTime !== 'undefined'){
-//                var timeDiff = curTime-prevTime;
-//                if(timeDiff>200){
-//
-//
-//
-//
-//
-//
-//                }
-//            }
-//            prevTime = curTime;
-//
-//        }
-//
-//        $(window).on('mousewheel', f);
+         var f = function(){
+            var curTime = new Date().getTime();
+            prevTime = curTime;
+
+        }
+
+        $(window).on('mousewheel', f);
         
         window.addEventListener('touchstart', function(event) {
           startPoint = event.changedTouches[0].pageY;
@@ -50,7 +39,7 @@ $(document).ready(function(){
             var curTime = new Date().getTime();
             if(typeof prevTime !== 'undefined'){
                 var timeDiff = curTime-prevTime;
-                if(timeDiff>200){
+                if(timeDiff>50){
                     if(event.deltaY > 0){
                         $('.start').fadeOut(200,function(){
                             $('.start').removeClass('visible');
@@ -104,7 +93,7 @@ $(document).ready(function(){
                     console.log('timeDiff: ', timeDiff);
                     console.log('===========================');
                     
-                    if(timeDiff>200){
+                    if(timeDiff>50){
                         canAnimateAbout = false;
                         
                         if(event.deltaY > 0){
@@ -422,7 +411,7 @@ $(document).ready(function(){
                 var curTime = new Date().getTime();
                 if(typeof prevTime !== 'undefined'){
                     var timeDiff = curTime-prevTime;
-                    if(timeDiff>200){
+                    if(timeDiff>50){
                     canAnimateAbout = false;
                     if(event.deltaY > 0){
 
@@ -625,7 +614,7 @@ $(document).ready(function(){
                 var curTime = new Date().getTime();
                 if(typeof prevTime !== 'undefined'){
                     var timeDiff = curTime-prevTime;
-                    if(timeDiff>200){
+                    if(timeDiff>50){
                     activeSlideNews = 0;
                     $('.news-animation').removeClass('hide-scroll-bott visible-scroll-bott hide-scroll-top visible-scroll-top');
                     $('.news-animation:nth-child(1)').addClass('visible-scroll-bott');
@@ -857,7 +846,7 @@ $(document).ready(function(){
                     var curTime = new Date().getTime();
                     if(typeof prevTime !== 'undefined'){
                         var timeDiff = curTime-prevTime;
-                        if(timeDiff>200){
+                        if(timeDiff>50){
                             $('.page').each(function(){
                                 if($(this).hasClass('visible')){
                                     $(this).addClass('hide-section');
