@@ -94,11 +94,14 @@ $(document).ready(function(){
         
         elProjects.addEventListener("wheel", function (event) {
             if(canAnimateAbout){
+                console.log('break 1 ',canAnimateAbout);
                 var curTime = new Date().getTime();
                 if(typeof prevTime !== 'undefined'){
                     var timeDiff = curTime-prevTime;
+                    console.log('break 2 ',canAnimateAbout);
                     if(timeDiff>200){
                         canAnimateAbout = false;
+                        console.log('break 3 ',canAnimateAbout);
                         if(event.deltaY > 0){
                             //вниз
 
@@ -132,11 +135,13 @@ $(document).ready(function(){
                                 },650);
                                 setTimeout(function(){
                                     canAnimateAbout = true;
+                                    console.log('break winn  ',canAnimateAbout);
                                 },1350);
                                 return;
                             }
                             setTimeout(function(){
                                 canAnimateAbout = true;
+                                console.log('break winn ',canAnimateAbout);
                             },800);
                             $('.nav-tabs a[href="#projects-tab-'+(activeSlideProjects+1)+'"]').tab('show');
                             $('.cube-bg').removeClass('cube-bg-show');
