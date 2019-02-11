@@ -20,13 +20,13 @@ $(document).ready(function(){
         var touchDelta = 0;
         var prevTime = new Date().getTime();
         
-         var f = function(){
+         
+
+        $(window).on('mousewheel', function(e){
+             e.preventDefault();
             var curTime = new Date().getTime();
             prevTime = curTime;
-
-        }
-
-        $(window).on('mousewheel', f);
+        });
         
         window.addEventListener('touchstart', function(event) {
           startPoint = event.changedTouches[0].pageY;
@@ -36,6 +36,7 @@ $(document).ready(function(){
 
         //start to menu
         elStart.addEventListener("wheel", function (event) {
+            event.preventDefault();
             var curTime = new Date().getTime();
             if(typeof prevTime !== 'undefined'){
                 var timeDiff = curTime-prevTime;
@@ -53,7 +54,7 @@ $(document).ready(function(){
                 }
             }
             prevTime = curTime;
-        }, true);
+        });
 
         //start to menu touch
         elStart.addEventListener('touchend', function(event) {
@@ -82,6 +83,7 @@ $(document).ready(function(){
         
         
         elProjects.addEventListener("wheel", function (event) {
+            event.preventDefault();
             if(canAnimateAbout){
                 var curTime = new Date().getTime();
                 
@@ -93,7 +95,7 @@ $(document).ready(function(){
                     console.log('timeDiff: ', timeDiff);
                     console.log('===========================');
                     
-                    if(timeDiff>50){
+                    if(timeDiff>200){
                         canAnimateAbout = false;
                         
                         if(event.deltaY > 0){
@@ -174,7 +176,7 @@ $(document).ready(function(){
                 }
             prevTime = curTime;
             }
-        }, true);
+        });
 
         //touch
         elProjects.addEventListener("touchend", function (event) {
@@ -406,12 +408,12 @@ $(document).ready(function(){
         }
 
         elAbout.addEventListener("wheel", function (event) {
-            
+            event.preventDefault();
             if(canAnimateAbout){
                 var curTime = new Date().getTime();
                 if(typeof prevTime !== 'undefined'){
                     var timeDiff = curTime-prevTime;
-                    if(timeDiff>50){
+                    if(timeDiff>200){
                     canAnimateAbout = false;
                     if(event.deltaY > 0){
 
@@ -481,7 +483,7 @@ $(document).ready(function(){
                 }
                 prevTime = curTime;
             }
-        }, true);
+        });
 
         //touch
         elAbout.addEventListener("touchend", function (event) {
@@ -610,11 +612,12 @@ $(document).ready(function(){
         //news scroll page
         var activeSlideNewsTabs = 0;
         $('.news').on('mousewheel', function (event) {
+            event.preventDefault();
             if(canAnimateAbout){
                 var curTime = new Date().getTime();
                 if(typeof prevTime !== 'undefined'){
                     var timeDiff = curTime-prevTime;
-                    if(timeDiff>50){
+                    if(timeDiff>200){
                     activeSlideNews = 0;
                     $('.news-animation').removeClass('hide-scroll-bott visible-scroll-bott hide-scroll-top visible-scroll-top');
                     $('.news-animation:nth-child(1)').addClass('visible-scroll-bott');
@@ -840,13 +843,14 @@ $(document).ready(function(){
         //================contacts=====================
 
         elContacts.addEventListener("wheel", function (event) {
+            event.preventDefault();
             if(canAnimateAbout){
                 if(event.deltaY < 0){
                     canAnimateAbout = false;
                     var curTime = new Date().getTime();
                     if(typeof prevTime !== 'undefined'){
                         var timeDiff = curTime-prevTime;
-                        if(timeDiff>50){
+                        if(timeDiff>200){
                             $('.page').each(function(){
                                 if($(this).hasClass('visible')){
                                     $(this).addClass('hide-section');
@@ -870,7 +874,7 @@ $(document).ready(function(){
                     prevTime = curTime;
                 }
             }
-        }, true);
+        });
 
         //touch
         elContacts.addEventListener("touchend", function (event) {
