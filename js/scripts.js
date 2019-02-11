@@ -37,7 +37,7 @@ $(document).ready(function(){
 //
 //        }
 
-        $(window).on('mousewheel', f);
+//        $(window).on('mousewheel', f);
         
         window.addEventListener('touchstart', function(event) {
           startPoint = event.changedTouches[0].pageY;
