@@ -20,22 +20,22 @@ $(document).ready(function(){
         var touchDelta = 0;
         var prevTime = new Date().getTime();
         
-         var f = function(){
-            var curTime = new Date().getTime();
-            if(typeof prevTime !== 'undefined'){
-                var timeDiff = curTime-prevTime;
-                if(timeDiff>200){
-
-
-
-
-
-
-                }
-            }
-            prevTime = curTime;
-
-        }
+//         var f = function(){
+//            var curTime = new Date().getTime();
+//            if(typeof prevTime !== 'undefined'){
+//                var timeDiff = curTime-prevTime;
+//                if(timeDiff>200){
+//
+//
+//
+//
+//
+//
+//                }
+//            }
+//            prevTime = curTime;
+//
+//        }
 
         $(window).on('mousewheel', f);
         
