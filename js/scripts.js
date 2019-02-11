@@ -41,33 +41,6 @@ $(document).ready(function(){
         
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         window.addEventListener('touchstart', function(event) {
           startPoint = event.changedTouches[0].pageY;
             
@@ -122,19 +95,14 @@ $(document).ready(function(){
         
         
         elProjects.addEventListener("wheel", function (event) {
-            
-                console.log('break 1 ',canAnimateAbout);
                 var curTime = new Date().getTime();
                 if(typeof prevTime !== 'undefined'){
                     var timeDiff = curTime-prevTime;
-                    console.log('break 2 ',canAnimateAbout);
                     if(timeDiff>50){
                         if(canAnimateAbout){
                         canAnimateAbout = false;
-                        console.log('break 3 ',canAnimateAbout);
                         if(event.deltaY > 0){
                             //вниз
-
                             activeSlideProjects += 1;
                             if(activeSlideProjects >= $('.projects-wrapp__left li').length){
                                 activeSlideProjects -= 1;
@@ -165,13 +133,11 @@ $(document).ready(function(){
                                 },650);
                                 setTimeout(function(){
                                     canAnimateAbout = true;
-                                    console.log('break winn  ',canAnimateAbout);
                                 },1350);
                                 return;
                             }
                             setTimeout(function(){
                                 canAnimateAbout = true;
-                                console.log('break winn ',canAnimateAbout);
                             },650);
                             $('.nav-tabs a[href="#projects-tab-'+(activeSlideProjects+1)+'"]').tab('show');
                             $('.cube-bg').removeClass('cube-bg-show');
@@ -202,8 +168,7 @@ $(document).ready(function(){
                             }
                             setTimeout(function(){
                                 canAnimateAbout = true;
-                                console.log('break winn ',canAnimateAbout);
-                            },1000);
+                            },650);
                             $('.nav-tabs a[href="#projects-tab-'+(activeSlideProjects+1)+'"]').tab('show');
                             $('.cube-bg').removeClass('cube-bg-show');
                             $('.cube-bg:nth-child('+(activeSlideProjects + 1)+')').addClass('cube-bg-show');
@@ -446,11 +411,12 @@ $(document).ready(function(){
 
         elAbout.addEventListener("wheel", function (event) {
             
-            if(canAnimateAbout){
-                var curTime = new Date().getTime();
-                if(typeof prevTime !== 'undefined'){
-                    var timeDiff = curTime-prevTime;
-                    if(timeDiff>50){
+            
+            var curTime = new Date().getTime();
+            if(typeof prevTime !== 'undefined'){
+                var timeDiff = curTime-prevTime;
+                if(timeDiff>50){
+                    if(canAnimateAbout){
                     canAnimateAbout = false;
                     if(event.deltaY > 0){
 
@@ -516,10 +482,11 @@ $(document).ready(function(){
                         }
                         AboutClassesScrollTop(activeSlideAbout)
                     }
-                    }
                 }
-                prevTime = curTime;
+                }
             }
+            prevTime = curTime;
+           
         }, true);
 
         //touch
@@ -649,11 +616,12 @@ $(document).ready(function(){
         //news scroll page
         var activeSlideNewsTabs = 0;
         $('.news').on('mousewheel', function (event) {
-            if(canAnimateAbout){
-                var curTime = new Date().getTime();
-                if(typeof prevTime !== 'undefined'){
-                    var timeDiff = curTime-prevTime;
-                    if(timeDiff>50){
+            
+            var curTime = new Date().getTime();
+            if(typeof prevTime !== 'undefined'){
+                var timeDiff = curTime-prevTime;
+                if(timeDiff>50){
+                    if(canAnimateAbout){
                     activeSlideNews = 0;
                     $('.news-animation').removeClass('hide-scroll-bott visible-scroll-bott hide-scroll-top visible-scroll-top');
                     $('.news-animation:nth-child(1)').addClass('visible-scroll-bott');
@@ -731,10 +699,11 @@ $(document).ready(function(){
                         $('.news-wrapp__left .nav-tabs a[href="#news-tab-'+(activeSlideNewsTabs+1)+'"]').tab('show');
 
                     }
-                    }
                 }
-                prevTime = curTime;
+                }
             }
+            prevTime = curTime;
+           
         });
         
         //touch
@@ -878,37 +847,39 @@ $(document).ready(function(){
         
         //================contacts=====================
 
-        elContacts.addEventListener("wheel", function (event) {
-            if(canAnimateAbout){
-                if(event.deltaY < 0){
-                    canAnimateAbout = false;
-                    var curTime = new Date().getTime();
-                    if(typeof prevTime !== 'undefined'){
-                        var timeDiff = curTime-prevTime;
-                        if(timeDiff>50){
-                            $('.page').each(function(){
-                                if($(this).hasClass('visible')){
-                                    $(this).addClass('hide-section');
-                                }
+        elContacts.addEventListener("wheel", function (event) {   
+            var curTime = new Date().getTime();
+            if(typeof prevTime !== 'undefined'){
+                var timeDiff = curTime-prevTime;
+                if(timeDiff>50){
+                    if(canAnimateAbout){
+                         canAnimateAbout = false;
+                        if(event.deltaY < 0){
+                        $('.page').each(function(){
+                            if($(this).hasClass('visible')){
+                                $(this).addClass('hide-section');
+                            }
+                        });
+                        setTimeout(()=>{
+                            $('.menu__wrapp__left__list li span').each(function(e){
+                                if($(this).hasClass('active')){
+                                    $('.menu__wrapp__left__list li span').removeClass('active');
+                                    $('[data-href="#news"]').addClass('active');
+                                }   
                             });
-                            setTimeout(()=>{
-                                $('.menu__wrapp__left__list li span').each(function(e){
-                                    if($(this).hasClass('active')){
-                                        $('.menu__wrapp__left__list li span').removeClass('active');
-                                        $('[data-href="#news"]').addClass('active');
-                                    }   
-                                });
-                                $('.page').removeClass('visible hide-section');
-                                $('.news').addClass('visible');
-                            },650);
-                            setTimeout(function(){
-                                canAnimateAbout = true;
-                            },1350); 
+                            $('.page').removeClass('visible hide-section');
+                            $('.news').addClass('visible');
+                        },650);
+                        setTimeout(function(){
+                            canAnimateAbout = true;
+                        },1350); 
                         }
                     }
-                    prevTime = curTime;
                 }
             }
+            prevTime = curTime;
+                
+            
         }, true);
 
         //touch
