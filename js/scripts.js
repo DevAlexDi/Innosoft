@@ -95,15 +95,21 @@ $(document).ready(function(){
         elProjects.addEventListener("wheel", function (event) {
             if(canAnimateAbout){
                 var curTime = new Date().getTime();
-                console.log('break 1');
+                
                 if(typeof prevTime !== 'undefined'){
                     var timeDiff = curTime-prevTime;
-                    console.log('break 2');
+                    console.log('===========================');
+                    console.log('curTime: ', curTime);
+                    console.log('prevTime: ', prevTime);
+                    console.log('timeDiff: ', timeDiff);
+                    console.log('===========================');
+                    
                     if(timeDiff>200){
                         canAnimateAbout = false;
+                        
                         if(event.deltaY > 0){
                             //вниз
-                            console.log('break 3');
+                  
                             activeSlideProjects += 1;
                             if(activeSlideProjects >= $('.projects-wrapp__left li').length){
                                 activeSlideProjects -= 1;
