@@ -142,7 +142,7 @@ $(document).ready(function(){
                             setTimeout(function(){
                                 canAnimateAbout = true;
                                 console.log('break winn ',canAnimateAbout);
-                            },2000);
+                            },650);
                             $('.nav-tabs a[href="#projects-tab-'+(activeSlideProjects+1)+'"]').tab('show');
                             $('.cube-bg').removeClass('cube-bg-show');
                             $('.cube-bg:nth-child('+(activeSlideProjects + 1)+')').addClass('cube-bg-show');
@@ -172,7 +172,7 @@ $(document).ready(function(){
                             }
                             setTimeout(function(){
                                 canAnimateAbout = true;
-                            },800);
+                            },650);
                             $('.nav-tabs a[href="#projects-tab-'+(activeSlideProjects+1)+'"]').tab('show');
                             $('.cube-bg').removeClass('cube-bg-show');
                             $('.cube-bg:nth-child('+(activeSlideProjects + 1)+')').addClass('cube-bg-show');
@@ -181,7 +181,7 @@ $(document).ready(function(){
                 }
             prevTime = curTime;
             }
-        }, true);
+        }, {capture: true});
 
         //touch
         elProjects.addEventListener("touchend", function (event) {
