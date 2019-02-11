@@ -50,7 +50,7 @@ $(document).ready(function(){
             var curTime = new Date().getTime();
             if(typeof prevTime !== 'undefined'){
                 var timeDiff = curTime-prevTime;
-                if(timeDiff>200){
+                if(timeDiff>10){
                     if(event.deltaY > 0){
                         $('.start').fadeOut(200,function(){
                             $('.start').removeClass('visible');
@@ -104,7 +104,7 @@ $(document).ready(function(){
                     console.log('timeDiff: ', timeDiff);
                     console.log('===========================');
                     
-                    if(timeDiff>200){
+                    if(timeDiff>10){
                         canAnimateAbout = false;
                         
                         if(event.deltaY > 0){
@@ -146,7 +146,7 @@ $(document).ready(function(){
                             setTimeout(function(){
                                 canAnimateAbout = true;
                                 console.log('can animate true');
-                            },800);
+                            },500);
                             $('.nav-tabs a[href="#projects-tab-'+(activeSlideProjects+1)+'"]').tab('show');
                             $('.cube-bg').removeClass('cube-bg-show');
                             $('.cube-bg:nth-child('+(activeSlideProjects + 1)+')').addClass('cube-bg-show');
@@ -176,7 +176,7 @@ $(document).ready(function(){
                             }
                             setTimeout(function(){
                                 canAnimateAbout = true;
-                            },800);
+                            },500);
                             $('.nav-tabs a[href="#projects-tab-'+(activeSlideProjects+1)+'"]').tab('show');
                             $('.cube-bg').removeClass('cube-bg-show');
                             $('.cube-bg:nth-child('+(activeSlideProjects + 1)+')').addClass('cube-bg-show');
@@ -216,7 +216,7 @@ $(document).ready(function(){
                     }
                     setTimeout(function(){
                         canAnimateAbout = true;
-                    },800);
+                    },500);
                     $('.nav-tabs a[href="#projects-tab-'+(activeSlideProjects+1)+'"]').tab('show');
                     $('.cube-bg').removeClass('cube-bg-show');
                     $('.cube-bg:nth-child('+(activeSlideProjects + 1)+')').addClass('cube-bg-show');
@@ -258,7 +258,7 @@ $(document).ready(function(){
                     }
                     setTimeout(function(){
                         canAnimateAbout = true;
-                    },800);
+                    },500);
                     $('.nav-tabs a[href="#projects-tab-'+(activeSlideProjects+1)+'"]').tab('show');
                     $('.cube-bg').removeClass('cube-bg-show');
                     $('.cube-bg:nth-child('+(activeSlideProjects + 1)+')').addClass('cube-bg-show');
@@ -422,7 +422,7 @@ $(document).ready(function(){
                 var curTime = new Date().getTime();
                 if(typeof prevTime !== 'undefined'){
                     var timeDiff = curTime-prevTime;
-                    if(timeDiff>200){
+                    if(timeDiff>10){
                     canAnimateAbout = false;
                     if(event.deltaY > 0){
 
@@ -451,7 +451,7 @@ $(document).ready(function(){
                             },650);
                             setTimeout(function(){
                                 canAnimateAbout = true;
-                            },1350); 
+                            },1250); 
                             return;
                         }
                         AboutClassesScrollBott(activeSlideAbout);
@@ -483,7 +483,7 @@ $(document).ready(function(){
                             },650);
                             setTimeout(function(){
                                 canAnimateAbout = true;
-                            },1350); 
+                            },1250); 
                             return;
                         }
                         AboutClassesScrollTop(activeSlideAbout)
@@ -625,7 +625,7 @@ $(document).ready(function(){
                 var curTime = new Date().getTime();
                 if(typeof prevTime !== 'undefined'){
                     var timeDiff = curTime-prevTime;
-                    if(timeDiff>200){
+                    if(timeDiff>10){
                     activeSlideNews = 0;
                     $('.news-animation').removeClass('hide-scroll-bott visible-scroll-bott hide-scroll-top visible-scroll-top');
                     $('.news-animation:nth-child(1)').addClass('visible-scroll-bott');
@@ -658,7 +658,7 @@ $(document).ready(function(){
                         }
                         setTimeout(function(){
                             canAnimateAbout = true;
-                        },800);
+                        },500);
                         $('.news-wrapp__left .nav-tabs a[href="#news-tab-'+(activeSlideNewsTabs+1)+'"]').tab('show');
                     }
                     if(event.originalEvent.deltaY < 0){
@@ -699,7 +699,7 @@ $(document).ready(function(){
                         }
                         setTimeout(function(){
                             canAnimateAbout = true;
-                        },800);
+                        },500);
                         $('.news-wrapp__left .nav-tabs a[href="#news-tab-'+(activeSlideNewsTabs+1)+'"]').tab('show');
 
                     }
@@ -857,7 +857,7 @@ $(document).ready(function(){
                     var curTime = new Date().getTime();
                     if(typeof prevTime !== 'undefined'){
                         var timeDiff = curTime-prevTime;
-                        if(timeDiff>200){
+                        if(timeDiff>10){
                             $('.page').each(function(){
                                 if($(this).hasClass('visible')){
                                     $(this).addClass('hide-section');
@@ -875,7 +875,7 @@ $(document).ready(function(){
                             },650);
                             setTimeout(function(){
                                 canAnimateAbout = true;
-                            },1350); 
+                            },1250); 
                         }
                     }
                     prevTime = curTime;
