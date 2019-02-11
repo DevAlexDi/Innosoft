@@ -142,7 +142,7 @@ $(document).ready(function(){
                             setTimeout(function(){
                                 canAnimateAbout = true;
                                 console.log('break winn ',canAnimateAbout);
-                            },800);
+                            },2000);
                             $('.nav-tabs a[href="#projects-tab-'+(activeSlideProjects+1)+'"]').tab('show');
                             $('.cube-bg').removeClass('cube-bg-show');
                             $('.cube-bg:nth-child('+(activeSlideProjects + 1)+')').addClass('cube-bg-show');
